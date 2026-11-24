@@ -10,6 +10,8 @@ export function itemImage(itemName, categoryId, groupLabel) {
   if (name === 'egg sandwich') return '/breakfast/egg%20sandwitch.webp'
   if (name === 'egg sauce') return '/breakfast/egg%20sauce.webp'
   if (name === 'normal chechebsa') return '/breakfast/normal%20chechebsa.webp'
+  if (name === 'special chechebsa') return '/breakfast/special%20chechebsa.webp'
+  if (name === 'fasting chechebsa') return '/breakfast/fasting%20chechebsa.webp'
 
   if (categoryId === 'breakfast') return photo('breakfast')
   if (categoryId === 'lunch') return photo('lunch')

@@ -46,12 +46,12 @@
             {
               "name": "Special Chechebsa",
               "price": 400,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/special%20chechebsa.webp"
             },
             {
               "name": "Fasting Chechebsa",
               "price": 350,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/fasting%20chechebsa.webp"
             },
             {
               "name": "Normal Omelet",
@@ -888,7 +888,7 @@
     {
       "name": "Special Chechebsa",
       "price": 400,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/special%20chechebsa.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -897,7 +897,7 @@
     {
       "name": "Fasting Chechebsa",
       "price": 350,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/fasting%20chechebsa.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
