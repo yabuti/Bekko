@@ -14,13 +14,31 @@ const categoryIcons = {
   fresh: GlassWater,
 }
 
-const filters = menu.map(({ id }) => ({ id }))
-
-export default function MenuSection({ menuUrl }) {
+export default function MenuSection({ menuUrl, categories, items }) {
   const { t } = useI18n()
   const site = useSite()
-  const [active, setActive] = useState('breakfast')
-  const visible = active === 'all' ? menu : menu.filter((category) => category.id === active)
+  const sourceCategories = categories ?? menu
+  const [active, setActive] = useState(sourceCategories[0]?.id ?? 'breakfast')
+
+  // Database-backed items are grouped here so admin edits show up on the public menu.
+  const view = sourceCategories.map((category) => {
+    if (!items) return category
+
+    const groups = new Map()
+    items.filter((item) => item.category === category.id).forEach((item) => {
+      const label = item.group_label || ''
+      if (!groups.has(label)) groups.set(label, [])
+      groups.get(label).push(item)
+    })
+
+    return {
+      ...category,
+      groups: [...groups.entries()].map(([label, groupItems]) => ({ label, items: groupItems })),
+    }
+  })
+
+  const filters = view.map(({ id }) => ({ id }))
+  const visible = active === 'all' ? view : view.filter((category) => category.id === active)
 
   const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
     ? fallback
@@ -76,7 +94,7 @@ export default function MenuSection({ menuUrl }) {
 
         <div className="menu-toolbar" role="tablist" aria-label={t('menu.categoriesLabel')}>
           {filters.map((filter) => {
-            const category = menu.find((item) => item.id === filter.id)
+            const category = view.find((entry) => entry.id === filter.id)
             return (
               <button
                 type="button"
@@ -94,7 +112,7 @@ export default function MenuSection({ menuUrl }) {
 
         <div className="menu-stream">
           {visible.flatMap((category) => {
-            const Icon = categoryIcons[category.id]
+            const Icon = categoryIcons[category.id] ?? Utensils
 
             return category.groups.map((group, groupIndex) => (
               <div className="menu-block" key={`${category.id}-${group.label || 'main'}`}>
@@ -120,10 +138,10 @@ export default function MenuSection({ menuUrl }) {
 
                 <div className="category-items">
                   {group.items.map((item) => (
-                    <article className="menu-item" key={item.name}>
+                    <article className="menu-item" key={item.id ?? item.name}>
                       <img
                         className="item-image"
-                        src={itemImage(item.name, category.id, group.label)}
+                        src={item.image || itemImage(item.name, category.id, group.label)}
                         alt=""
                         loading="lazy"
                       />

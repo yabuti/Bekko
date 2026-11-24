@@ -41,9 +41,13 @@ class StaffAuthController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(
-            $user->role === 'kitchen' ? route('staff.kitchen') : route('staff.waiter'),
-        );
+        $dashboard = match ($user->role) {
+            'kitchen' => route('staff.kitchen'),
+            'admin' => route('staff.menu'),
+            default => route('staff.waiter'),
+        };
+
+        return redirect()->intended($dashboard);
     }
 
     public function logout(Request $request): RedirectResponse

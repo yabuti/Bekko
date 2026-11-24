@@ -7,6 +7,9 @@ return [
     'badge' => 'Now open — come say hi',
     'currency' => 'ETB',
 
+    // Menu categories available to staff when adding or editing a meal.
+    'menu_categories' => ['breakfast', 'lunch', 'bites', 'drinks', 'fresh'],
+
     'hours' => [
         ['day' => 'Monday – Friday', 'time' => '8:00 AM – 9:00 PM'],
         ['day' => 'Saturday – Sunday', 'time' => '9:00 AM – 10:00 PM'],

@@ -71,6 +71,19 @@ Change these passwords before using the app in a real cafe.
 | `/staff/waiter` | Waiter dashboard |
 | `/staff/kitchen` | Kitchen dashboard |
 | `/staff/tables` | Printable QR codes for all tables |
+| `/staff/menu` | Admin menu manager (admins only) |
+
+## Managing the menu
+
+Sign in as the admin and open `/staff/menu` (admins are sent there after login). From there you can:
+
+- add a new meal with a name, category, group heading, price and display order
+- edit an existing meal's name, price, group or category
+- upload, replace or remove a meal photo (JPG, PNG or WebP, up to 2 MB)
+
+Photos are stored in `public/menu-photos/` and appear straight away on `/menu` and on the customer QR menu. Deleting a meal keeps it out of both menus while preserving old order lines.
+
+> Reseeding with `MenuItemSeeder` restores prices and photos from `menu.json`, which will overwrite changes made in the admin page. Do not reseed after editing the menu in the admin page.
 
 ## Editing content
 
@@ -79,6 +92,7 @@ Change these passwords before using the app in a real cafe.
 - `public/{breakfast,lunch,drink}/` — real menu photos, mapped by name in `resources/js/data/menuPhotos.json`
 - `resources/js/i18n/{en,am,or}/` — one folder per language, with one file per page (English, Amharic, Afaan Oromoo)
 - `public/images/*.svg` — fallback thumbnails used when a menu item has no photo
+- `public/menu-photos/` — photos uploaded in the admin page (gitignored)
 
 After changing menu prices or items, re-run:
 

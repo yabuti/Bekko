@@ -47,6 +47,15 @@ return [
             'report' => false,
         ],
 
+        // Admin-uploaded meal photos live in a public folder, so no storage symlink is needed.
+        'menu_photos' => [
+            'driver' => 'local',
+            'root' => public_path('menu-photos'),
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

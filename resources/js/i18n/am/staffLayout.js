@@ -6,7 +6,8 @@ export default {
     "nav": {
       "waiter": "አስተናጋጅ",
       "kitchen": "ወጥ ቤት",
-      "tables": "የጠረጴዛ QR"
+      "tables": "የጠረጴዛ QR",
+      "menu": "የምናሌ አስተዳደር"
     },
     "logout": "ውጣ",
     "liveOrders": "ቀጥታ ትዕዛዞች"

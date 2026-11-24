@@ -4,6 +4,7 @@ use App\Http\Controllers\CustomerMenuController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Staff\KitchenController;
+use App\Http\Controllers\Staff\MenuController;
 use App\Http\Controllers\Staff\OrderStatusController;
 use App\Http\Controllers\Staff\TableQrController;
 use App\Http\Controllers\Staff\WaiterController;
@@ -32,4 +33,11 @@ Route::middleware(['auth', 'staff:kitchen,admin'])->group(function () {
 Route::middleware(['auth', 'staff:waiter,kitchen,admin'])->group(function () {
     Route::post('/staff/orders/{order}/status', [OrderStatusController::class, 'update'])->name('staff.orders.status');
     Route::get('/staff/tables', [TableQrController::class, 'index'])->name('staff.tables');
+});
+
+Route::middleware(['auth', 'staff:admin'])->group(function () {
+    Route::get('/staff/menu', [MenuController::class, 'index'])->name('staff.menu');
+    Route::post('/staff/menu', [MenuController::class, 'store'])->name('staff.menu.store');
+    Route::put('/staff/menu/{menu_item}', [MenuController::class, 'update'])->name('staff.menu.update');
+    Route::delete('/staff/menu/{menu_item}', [MenuController::class, 'destroy'])->name('staff.menu.destroy');
 });

@@ -6,7 +6,8 @@ export default {
     "nav": {
       "waiter": "Waiter",
       "kitchen": "Kitchen",
-      "tables": "Table QR"
+      "tables": "Table QR",
+      "menu": "Menu manager"
     },
     "logout": "Log out",
     "liveOrders": "Live orders"
