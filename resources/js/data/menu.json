@@ -41,7 +41,7 @@
             {
               "name": "Normal Chechebsa",
               "price": 300,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/normal%20chechebsa.webp"
             },
             {
               "name": "Special Chechebsa",
@@ -879,7 +879,7 @@
     {
       "name": "Normal Chechebsa",
       "price": 300,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/normal%20chechebsa.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
