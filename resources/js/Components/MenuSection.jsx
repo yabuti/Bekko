@@ -136,23 +136,27 @@ export default function MenuSection({ menuUrl, categories, items }) {
                   </>
                 )}
 
-                <div className="category-items">
-                  {group.items.map((item) => (
-                    <article className="menu-item" key={item.id ?? item.name}>
-                      <img
-                        className="item-image"
-                        src={item.image || itemImage(item.name, category.id, group.label)}
-                        alt=""
-                        loading="lazy"
-                      />
-                      <div className="item-info">
-                        <div className="item-top">
-                          <h5>{item.name}</h5>
-                          {item.tag && <span className="item-tag">{item.tag}</span>}
-                        </div>
-                        {item.description && <p className="item-description">{item.description}</p>}
+                <div className="formal-grid">
+                  {group.items.map((item, index) => (
+                    <article
+                      className={`formal-item${index % 2 === 1 ? ' is-reversed' : ''}`}
+                      key={item.id ?? item.name}
+                    >
+                      <div className="formal-item-photo">
+                        <img
+                          src={item.image || itemImage(item.name, category.id, group.label)}
+                          alt=""
+                          loading="lazy"
+                        />
                       </div>
-                      <span className="item-price">{site.currency} {item.price}</span>
+                      <div className="formal-item-body">
+                        <div className="formal-item-top">
+                          <h5>{item.name}</h5>
+                          <span className="formal-item-price">{site.currency} {item.price}</span>
+                        </div>
+                        {item.tag && <span className="formal-item-tag">{item.tag}</span>}
+                        {item.description && <p className="formal-item-description">{item.description}</p>}
+                      </div>
                     </article>
                   ))}
                 </div>

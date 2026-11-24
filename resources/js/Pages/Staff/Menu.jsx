@@ -68,6 +68,17 @@ export default function MenuManager({ categories = [], items = [] }) {
     })
   }, [items, query, categoryFilter])
 
+  const sections = useMemo(
+    () => categories
+      .filter((category) => categoryFilter === 'all' || category.id === categoryFilter)
+      .map((category) => ({
+        ...category,
+        items: filtered.filter((item) => item.category === category.id),
+      }))
+      .filter((section) => section.items.length > 0),
+    [categories, categoryFilter, filtered],
+  )
+
   const openAdd = () => {
     setEditing(null)
     setForm({
@@ -192,34 +203,43 @@ export default function MenuManager({ categories = [], items = [] }) {
       </div>
 
       {filtered.length ? (
-        <div className="admin-grid">
-          {filtered.map((item) => (
-            <article className="admin-item-card" key={item.id}>
-              <div className="admin-item-photo">
-                <img src={item.image || fallbackFor(item.category)} alt="" loading="lazy" />
+        <div className="admin-sections">
+          {sections.map((section) => (
+            <section className="admin-section" key={section.id}>
+              <div className="admin-section-head">
+                <h2>{categoryLabel(section.id, section.label)}</h2>
+                <span>{t('staffMenu.itemsCount', { count: section.items.length })}</span>
               </div>
-              <div className="admin-item-body">
-                <span className="admin-item-meta">
-                  {categoryLabel(item.category, item.category)}
-                  {item.group_label ? ` · ${item.group_label}` : ''}
-                </span>
-                <h3>{item.name}</h3>
-                <strong>{site.currency} {item.price}</strong>
-                <div className="admin-item-actions">
-                  <button type="button" onClick={() => openEdit(item)}>
-                    <Pencil size={15} /> {t('staffMenu.edit')}
-                  </button>
-                  <button
-                    type="button"
-                    className="is-danger"
-                    disabled={deleting === item.id}
-                    onClick={() => remove(item)}
-                  >
-                    <Trash2 size={15} /> {t('staffMenu.delete')}
-                  </button>
-                </div>
+              <div className="admin-grid">
+                {section.items.map((item) => (
+                  <article className="admin-item-card" key={item.id}>
+                    <div className="admin-item-photo">
+                      <img src={item.image || fallbackFor(item.category)} alt="" loading="lazy" />
+                    </div>
+                    <div className="admin-item-body">
+                      <span className="admin-item-meta">
+                        {item.group_label || categoryLabel(item.category, item.category)}
+                      </span>
+                      <h3>{item.name}</h3>
+                      <strong>{site.currency} {item.price}</strong>
+                      <div className="admin-item-actions">
+                        <button type="button" onClick={() => openEdit(item)}>
+                          <Pencil size={15} /> {t('staffMenu.edit')}
+                        </button>
+                        <button
+                          type="button"
+                          className="is-danger"
+                          disabled={deleting === item.id}
+                          onClick={() => remove(item)}
+                        >
+                          <Trash2 size={15} /> {t('staffMenu.delete')}
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
-            </article>
+            </section>
           ))}
         </div>
       ) : (
