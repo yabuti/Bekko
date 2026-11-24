@@ -1,41 +1,101 @@
 # Bekko Coffee
 
-A React + Vite website for the cafe, with a separate menu page, digital QR menu and a printable menu.
+A Laravel application with a React frontend (Inertia.js) for table QR ordering.
 
-## What's inside
+Customers scan the QR code on their table, order from their phone, and the order appears instantly on the waiter and kitchen dashboards. Those dashboards refresh every 5 seconds.
 
-- **Homepage** — hero, highlights, our story, and find-us sections
-- **Menu page** (`/#menu`) — photo cards grouped by Breakfast, Lunch, Bites, Drinks and Fresh Drinks
-- **Print menu** — an A4-friendly version with logo and QR code
-- **QR code** — points to `/#menu`, so it keeps working wherever the site is hosted
+## Project structure
 
-## Run locally
+The project lives directly in this folder — there is no `website/` wrapper.
 
-```bash
-cd website
-npm install
-npm run dev
+- `app/` — Laravel models, controllers, middleware, requests and seeders
+- `routes/web.php` — all customer and staff routes
+- `database/` — SQLite database, migrations and seeders
+- `resources/js/Pages/` — React/Inertia pages
+- `resources/js/Components/` — shared React components
+- `resources/css/` — site styles
+- `public/images/` — menu photos and hero image
+- `public/logo.webp` — cafe logo
+
+## Setup
+
+```powershell
+composer install
+cp .env.example .env
+php artisan key:generate
+
+# SQLite database file
+New-Item -ItemType File database/database.sqlite -Force
+
+php artisan migrate --seed
+
+cmd /c "npm install"
+cmd /c "npm run build"
+php artisan serve
 ```
 
-Open the URL printed by Vite (usually `http://localhost:5173`).
+Open `http://127.0.0.1:8000`.
 
-## Edit the content
+> On Windows, use `cmd /c "npm ..."` because `npm.ps1` is blocked by the PowerShell execution policy.
 
-- `website/src/data/site.js` — cafe name, tagline, hours, address, contact details, currency
-- `website/src/data/menu.js` — menu categories, item names and prices
-- `website/src/data/menuImages.js` — maps items to thumbnail files
-- `website/public/images/` — menu thumbnails and the logo (`logo.webp`)
+## Demo staff accounts
 
-Replace any file in `website/public/images/` with a real photo using the same filename and the site updates automatically.
+After seeding, sign in at `/staff/login`:
+
+| Role | Email | Password |
+| --- | --- | --- |
+| Admin | `admin@bekkocoffee.test` | `password` |
+| Waiter | `waiter@bekkocoffee.test` | `password` |
+| Kitchen | `kitchen@bekkocoffee.test` | `password` |
+
+Change these passwords before using the app in a real cafe.
+
+## How the ordering flow works
+
+1. Each table has a unique code (`T1`–`T10`) and a QR code pointing to `/t/T1`.
+2. A customer scans the code, picks items from the menu, and taps **Place order**.
+3. The order is saved to the database and the customer gets a tracking page at `/orders/{token}`.
+4. The kitchen dashboard shows the new ticket. Staff move it through **Start preparing → Mark ready**.
+5. The waiter dashboard shows ready orders and staff tap **Mark as served**.
+6. Both dashboards reload new order data every 5 seconds. The customer's tracking page does the same.
+
+## Useful routes
+
+| URL | Purpose |
+| --- | --- |
+| `/` | Public homepage and full menu |
+| `/t/T1` | Customer menu for Table 1 (change the code for other tables) |
+| `/orders/{token}` | Customer order tracking link |
+| `/staff/login` | Staff sign-in |
+| `/staff/waiter` | Waiter dashboard |
+| `/staff/kitchen` | Kitchen dashboard |
+| `/staff/tables` | Printable QR codes for all tables |
+
+## Editing content
+
+- `resources/js/data/menu.json` — the 142 menu items and prices (shared by React and the seeder)
+- `config/site.php` — cafe name, hours, address, phone, email, Instagram and currency
+- `public/images/*.svg` — menu thumbnail placeholders; replace them with real photos using the same filenames
+
+After changing menu prices or items, re-run:
+
+```powershell
+php artisan db:seed --class=MenuItemSeeder
+```
 
 ## Commands
 
-```bash
-npm run dev      # start the dev server
-npm run build    # production build into website/dist
-npm run lint     # check the code
+```powershell
+php artisan migrate --seed   # reset and seed the database
+cmd /c "npm run dev"         # Vite dev server (optional)
+cmd /c "npm run build"       # production assets
+php artisan test             # Laravel tests
 ```
 
-## Deploy
+## Git
 
-`npm run build` produces a static site in `website/dist` that can be hosted for free on Netlify, Vercel or GitHub Pages.
+```powershell
+git add .
+git commit -m "Laravel ordering system"
+git push
+```

@@ -1,0 +1,2104 @@
+{
+  "categories": [
+    {
+      "id": "breakfast",
+      "label": "Breakfast",
+      "blurb": "Start the day the local way.",
+      "groups": [
+        {
+          "label": null,
+          "items": [
+            {
+              "name": "Egg Sandwich",
+              "price": 250,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Egg Sauce",
+              "price": 300,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Normal Ful",
+              "price": 350,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Special Ful",
+              "price": 450,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Normal Fetira",
+              "price": 350,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Special Fetira",
+              "price": 450,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Normal Chechebsa",
+              "price": 300,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Special Chechebsa",
+              "price": 400,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Fasting Chechebsa",
+              "price": 350,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Normal Omelet",
+              "price": 350,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Special Omelet",
+              "price": 450,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Bula with Butter",
+              "price": 350,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Bula with Kitfo",
+              "price": 800,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Fasting Bula",
+              "price": 300,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Kinche",
+              "price": 350,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Kinche with Egg",
+              "price": 400,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Fasting Kinche",
+              "price": 300,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Firfir with Butter",
+              "price": 300,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Tibs Firfir",
+              "price": 450,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Kuanta Firfir",
+              "price": 500,
+              "image": "/images/breakfast.svg"
+            },
+            {
+              "name": "Fasting Firfir",
+              "price": 250,
+              "image": "/images/breakfast.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "Lunch",
+      "blurb": "Proper plates, made fresh.",
+      "groups": [
+        {
+          "label": null,
+          "items": [
+            {
+              "name": "Pasta with Sauce",
+              "price": 250,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Pasta with Vegetable",
+              "price": 250,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Pasta with Meat",
+              "price": 380,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Chicken Rice",
+              "price": 430,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Beef Rice",
+              "price": 380,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Rice with Vegetable",
+              "price": 250,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Chicken Tibs",
+              "price": 900,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Chikina Tibs",
+              "price": 800,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Shiro with Butter",
+              "price": 300,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Shiro with Salad",
+              "price": 350,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Fasting Shiro",
+              "price": 250,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Bozena Shiro",
+              "price": 400,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Meser with Butter",
+              "price": 300,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Normal Meser",
+              "price": 250,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Half Half (Shiro/Meser)",
+              "price": 300,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Fasting Half Half",
+              "price": 250,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Timatim Lebleb",
+              "price": 280,
+              "image": "/images/lunch.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bites",
+      "label": "Bites",
+      "blurb": "Pizza, burgers, salads and more.",
+      "groups": [
+        {
+          "label": "Pizza",
+          "items": [
+            {
+              "name": "Special Pizza",
+              "price": 850,
+              "image": "/images/pizza.svg"
+            },
+            {
+              "name": "Beef Pizza",
+              "price": 680,
+              "image": "/images/pizza.svg"
+            },
+            {
+              "name": "Chicken Pizza",
+              "price": 750,
+              "image": "/images/pizza.svg"
+            },
+            {
+              "name": "Tuna Pizza",
+              "price": 750,
+              "image": "/images/pizza.svg"
+            },
+            {
+              "name": "Margherita",
+              "price": 580,
+              "image": "/images/pizza.svg"
+            },
+            {
+              "name": "Vegetable Pizza",
+              "price": 500,
+              "image": "/images/pizza.svg"
+            }
+          ]
+        },
+        {
+          "label": "Burgers & Chips",
+          "items": [
+            {
+              "name": "Special Burger",
+              "price": 850,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Cheese Burger",
+              "price": 550,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Double Cheese Burger",
+              "price": 700,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Beef Burger",
+              "price": 450,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Double Beef Burger",
+              "price": 650,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Chips",
+              "price": 250,
+              "image": "/images/burger.svg"
+            }
+          ]
+        },
+        {
+          "label": "Salads",
+          "items": [
+            {
+              "name": "Green Salad",
+              "price": 400,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Mixed Fruit Salad",
+              "price": 450,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Special Salad",
+              "price": 600,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Tuna Salad",
+              "price": 690,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Chicken Salad",
+              "price": 700,
+              "image": "/images/lunch.svg"
+            },
+            {
+              "name": "Fruit Punch",
+              "price": 300,
+              "image": "/images/juice.svg"
+            }
+          ]
+        },
+        {
+          "label": "Club Sandwiches",
+          "items": [
+            {
+              "name": "Beef Club Sandwich",
+              "price": 500,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Tuna Club Sandwich",
+              "price": 500,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Mixed Club Sandwich",
+              "price": 550,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Chicken Club Sandwich",
+              "price": 600,
+              "image": "/images/burger.svg"
+            }
+          ]
+        },
+        {
+          "label": "Burritos",
+          "items": [
+            {
+              "name": "Special Burrito",
+              "price": 750,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Chicken Burrito",
+              "price": 650,
+              "image": "/images/burger.svg"
+            },
+            {
+              "name": "Beef Burrito",
+              "price": 650,
+              "image": "/images/burger.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "label": "Drinks",
+      "blurb": "Coffee, tea and juices.",
+      "groups": [
+        {
+          "label": "Hot Drinks",
+          "items": [
+            {
+              "name": "Traditional Coffee",
+              "price": 60,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Steam Coffee",
+              "price": 70,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Espresso",
+              "price": 90,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Macchiato",
+              "price": 120,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Americano",
+              "price": 130,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Milk",
+              "price": 120,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Hot Chocolate",
+              "price": 220,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Hot Caramel",
+              "price": 220,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Cappuccino",
+              "price": 240,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Tea",
+              "price": 50,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Tosign Tea",
+              "price": 70,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Ginger Tea",
+              "price": 70,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Lemon Tea",
+              "price": 70,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Ginger (Keshir)",
+              "price": 80,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Mint Tea",
+              "price": 90,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Moringa",
+              "price": 90,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Pineapple Tea",
+              "price": 120,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Orange Tea",
+              "price": 120,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Mango Tea",
+              "price": 120,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Peanut Tea",
+              "price": 140,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Tea Corenti",
+              "price": 150,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Peanut with Milk",
+              "price": 180,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Ginger with Milk",
+              "price": 200,
+              "image": "/images/coffee.svg"
+            }
+          ]
+        },
+        {
+          "label": "Normal Juice",
+          "items": [
+            {
+              "name": "Avocado",
+              "price": 230,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Papaya",
+              "price": 230,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Mango",
+              "price": 230,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Pineapple",
+              "price": 230,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Beso Juice",
+              "price": 230,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Watermelon",
+              "price": 250,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Mixed",
+              "price": 250,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Beso with Milk",
+              "price": 300,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Telba",
+              "price": 300,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Orange",
+              "price": 400,
+              "image": "/images/juice.svg"
+            }
+          ]
+        },
+        {
+          "label": "Iced Beverages",
+          "items": [
+            {
+              "name": "Iced Latte",
+              "price": 250,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Iced Coffee",
+              "price": 250,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Iced Caramel",
+              "price": 280,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Iced Chocolate",
+              "price": 280,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Iced Vanilla Matcha",
+              "price": 400,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Iced Strawberry Matcha",
+              "price": 450,
+              "image": "/images/coffee.svg"
+            },
+            {
+              "name": "Ube Latte",
+              "price": 400,
+              "image": "/images/coffee.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fresh",
+      "label": "Fresh Drinks",
+      "blurb": "Blended, shaken and ice-cold.",
+      "groups": [
+        {
+          "label": "Special Juice",
+          "items": [
+            {
+              "name": "Cooling Faster",
+              "price": 300,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Strawberry Smoothie",
+              "price": 300,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Body Builder",
+              "price": 300,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Power",
+              "price": 350,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Mind Set",
+              "price": 350,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Special with Cream",
+              "price": 350,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Temir",
+              "price": 350,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Special Bikko Juice",
+              "price": 500,
+              "image": "/images/juice.svg"
+            }
+          ]
+        },
+        {
+          "label": "Mojito",
+          "items": [
+            {
+              "name": "Classical Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Strawberry Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Cinnamon Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Pineapple Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Blue Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Red Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Mint Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Lemon Mojito",
+              "price": 250,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Watermelon Mojito",
+              "price": 230,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Espresso Mojito",
+              "price": 280,
+              "image": "/images/mojito.svg"
+            },
+            {
+              "name": "Special Mojito",
+              "price": 280,
+              "image": "/images/mojito.svg"
+            }
+          ]
+        },
+        {
+          "label": "Smoothies & Shakes",
+          "items": [
+            {
+              "name": "Special Shake",
+              "price": 500,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Strawberry Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Avocado Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Avocado Berry Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Papaya Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Mango Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Mixed Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Protein Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Banana Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Smoothie Shake",
+              "price": 330,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Chocolate Milk Shake",
+              "price": 350,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Strawberry Milk Shake",
+              "price": 350,
+              "image": "/images/shake.svg"
+            },
+            {
+              "name": "Vanilla Milk Shake",
+              "price": 350,
+              "image": "/images/shake.svg"
+            }
+          ]
+        },
+        {
+          "label": "Soft Drinks",
+          "items": [
+            {
+              "name": "Water, 1/4 L",
+              "price": 30,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Water, 1/2 L",
+              "price": 50,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Soft Drink",
+              "price": 90,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Ambo Water",
+              "price": 90,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Yogurt",
+              "price": 150,
+              "image": "/images/juice.svg"
+            }
+          ]
+        },
+        {
+          "label": "Extras",
+          "items": [
+            {
+              "name": "Take Away Box",
+              "price": 60,
+              "image": "/images/juice.svg"
+            },
+            {
+              "name": "Cup",
+              "price": 30,
+              "image": "/images/juice.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "Egg Sandwich",
+      "price": 250,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 0
+    },
+    {
+      "name": "Egg Sauce",
+      "price": 300,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 1
+    },
+    {
+      "name": "Normal Ful",
+      "price": 350,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 2
+    },
+    {
+      "name": "Special Ful",
+      "price": 450,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 3
+    },
+    {
+      "name": "Normal Fetira",
+      "price": 350,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 4
+    },
+    {
+      "name": "Special Fetira",
+      "price": 450,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 5
+    },
+    {
+      "name": "Normal Chechebsa",
+      "price": 300,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 6
+    },
+    {
+      "name": "Special Chechebsa",
+      "price": 400,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 7
+    },
+    {
+      "name": "Fasting Chechebsa",
+      "price": 350,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 8
+    },
+    {
+      "name": "Normal Omelet",
+      "price": 350,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 9
+    },
+    {
+      "name": "Special Omelet",
+      "price": 450,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 10
+    },
+    {
+      "name": "Bula with Butter",
+      "price": 350,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 11
+    },
+    {
+      "name": "Bula with Kitfo",
+      "price": 800,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 12
+    },
+    {
+      "name": "Fasting Bula",
+      "price": 300,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 13
+    },
+    {
+      "name": "Kinche",
+      "price": 350,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 14
+    },
+    {
+      "name": "Kinche with Egg",
+      "price": 400,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 15
+    },
+    {
+      "name": "Fasting Kinche",
+      "price": 300,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 16
+    },
+    {
+      "name": "Firfir with Butter",
+      "price": 300,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 17
+    },
+    {
+      "name": "Tibs Firfir",
+      "price": 450,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 18
+    },
+    {
+      "name": "Kuanta Firfir",
+      "price": 500,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 19
+    },
+    {
+      "name": "Fasting Firfir",
+      "price": 250,
+      "image": "/images/breakfast.svg",
+      "category": "breakfast",
+      "category_label": "Breakfast",
+      "group_label": null,
+      "sort_order": 20
+    },
+    {
+      "name": "Pasta with Sauce",
+      "price": 250,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 21
+    },
+    {
+      "name": "Pasta with Vegetable",
+      "price": 250,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 22
+    },
+    {
+      "name": "Pasta with Meat",
+      "price": 380,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 23
+    },
+    {
+      "name": "Chicken Rice",
+      "price": 430,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 24
+    },
+    {
+      "name": "Beef Rice",
+      "price": 380,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 25
+    },
+    {
+      "name": "Rice with Vegetable",
+      "price": 250,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 26
+    },
+    {
+      "name": "Chicken Tibs",
+      "price": 900,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 27
+    },
+    {
+      "name": "Chikina Tibs",
+      "price": 800,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 28
+    },
+    {
+      "name": "Shiro with Butter",
+      "price": 300,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 29
+    },
+    {
+      "name": "Shiro with Salad",
+      "price": 350,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 30
+    },
+    {
+      "name": "Fasting Shiro",
+      "price": 250,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 31
+    },
+    {
+      "name": "Bozena Shiro",
+      "price": 400,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 32
+    },
+    {
+      "name": "Meser with Butter",
+      "price": 300,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 33
+    },
+    {
+      "name": "Normal Meser",
+      "price": 250,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 34
+    },
+    {
+      "name": "Half Half (Shiro/Meser)",
+      "price": 300,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 35
+    },
+    {
+      "name": "Fasting Half Half",
+      "price": 250,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 36
+    },
+    {
+      "name": "Timatim Lebleb",
+      "price": 280,
+      "image": "/images/lunch.svg",
+      "category": "lunch",
+      "category_label": "Lunch",
+      "group_label": null,
+      "sort_order": 37
+    },
+    {
+      "name": "Special Pizza",
+      "price": 850,
+      "image": "/images/pizza.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Pizza",
+      "sort_order": 38
+    },
+    {
+      "name": "Beef Pizza",
+      "price": 680,
+      "image": "/images/pizza.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Pizza",
+      "sort_order": 39
+    },
+    {
+      "name": "Chicken Pizza",
+      "price": 750,
+      "image": "/images/pizza.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Pizza",
+      "sort_order": 40
+    },
+    {
+      "name": "Tuna Pizza",
+      "price": 750,
+      "image": "/images/pizza.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Pizza",
+      "sort_order": 41
+    },
+    {
+      "name": "Margherita",
+      "price": 580,
+      "image": "/images/pizza.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Pizza",
+      "sort_order": 42
+    },
+    {
+      "name": "Vegetable Pizza",
+      "price": 500,
+      "image": "/images/pizza.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Pizza",
+      "sort_order": 43
+    },
+    {
+      "name": "Special Burger",
+      "price": 850,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burgers & Chips",
+      "sort_order": 44
+    },
+    {
+      "name": "Cheese Burger",
+      "price": 550,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burgers & Chips",
+      "sort_order": 45
+    },
+    {
+      "name": "Double Cheese Burger",
+      "price": 700,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burgers & Chips",
+      "sort_order": 46
+    },
+    {
+      "name": "Beef Burger",
+      "price": 450,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burgers & Chips",
+      "sort_order": 47
+    },
+    {
+      "name": "Double Beef Burger",
+      "price": 650,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burgers & Chips",
+      "sort_order": 48
+    },
+    {
+      "name": "Chips",
+      "price": 250,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burgers & Chips",
+      "sort_order": 49
+    },
+    {
+      "name": "Green Salad",
+      "price": 400,
+      "image": "/images/lunch.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Salads",
+      "sort_order": 50
+    },
+    {
+      "name": "Mixed Fruit Salad",
+      "price": 450,
+      "image": "/images/lunch.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Salads",
+      "sort_order": 51
+    },
+    {
+      "name": "Special Salad",
+      "price": 600,
+      "image": "/images/lunch.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Salads",
+      "sort_order": 52
+    },
+    {
+      "name": "Tuna Salad",
+      "price": 690,
+      "image": "/images/lunch.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Salads",
+      "sort_order": 53
+    },
+    {
+      "name": "Chicken Salad",
+      "price": 700,
+      "image": "/images/lunch.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Salads",
+      "sort_order": 54
+    },
+    {
+      "name": "Fruit Punch",
+      "price": 300,
+      "image": "/images/juice.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Salads",
+      "sort_order": 55
+    },
+    {
+      "name": "Beef Club Sandwich",
+      "price": 500,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Club Sandwiches",
+      "sort_order": 56
+    },
+    {
+      "name": "Tuna Club Sandwich",
+      "price": 500,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Club Sandwiches",
+      "sort_order": 57
+    },
+    {
+      "name": "Mixed Club Sandwich",
+      "price": 550,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Club Sandwiches",
+      "sort_order": 58
+    },
+    {
+      "name": "Chicken Club Sandwich",
+      "price": 600,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Club Sandwiches",
+      "sort_order": 59
+    },
+    {
+      "name": "Special Burrito",
+      "price": 750,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burritos",
+      "sort_order": 60
+    },
+    {
+      "name": "Chicken Burrito",
+      "price": 650,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burritos",
+      "sort_order": 61
+    },
+    {
+      "name": "Beef Burrito",
+      "price": 650,
+      "image": "/images/burger.svg",
+      "category": "bites",
+      "category_label": "Bites",
+      "group_label": "Burritos",
+      "sort_order": 62
+    },
+    {
+      "name": "Traditional Coffee",
+      "price": 60,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 63
+    },
+    {
+      "name": "Steam Coffee",
+      "price": 70,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 64
+    },
+    {
+      "name": "Espresso",
+      "price": 90,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 65
+    },
+    {
+      "name": "Macchiato",
+      "price": 120,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 66
+    },
+    {
+      "name": "Americano",
+      "price": 130,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 67
+    },
+    {
+      "name": "Milk",
+      "price": 120,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 68
+    },
+    {
+      "name": "Hot Chocolate",
+      "price": 220,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 69
+    },
+    {
+      "name": "Hot Caramel",
+      "price": 220,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 70
+    },
+    {
+      "name": "Cappuccino",
+      "price": 240,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 71
+    },
+    {
+      "name": "Tea",
+      "price": 50,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 72
+    },
+    {
+      "name": "Tosign Tea",
+      "price": 70,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 73
+    },
+    {
+      "name": "Ginger Tea",
+      "price": 70,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 74
+    },
+    {
+      "name": "Lemon Tea",
+      "price": 70,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 75
+    },
+    {
+      "name": "Ginger (Keshir)",
+      "price": 80,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 76
+    },
+    {
+      "name": "Mint Tea",
+      "price": 90,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 77
+    },
+    {
+      "name": "Moringa",
+      "price": 90,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 78
+    },
+    {
+      "name": "Pineapple Tea",
+      "price": 120,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 79
+    },
+    {
+      "name": "Orange Tea",
+      "price": 120,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 80
+    },
+    {
+      "name": "Mango Tea",
+      "price": 120,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 81
+    },
+    {
+      "name": "Peanut Tea",
+      "price": 140,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 82
+    },
+    {
+      "name": "Tea Corenti",
+      "price": 150,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 83
+    },
+    {
+      "name": "Peanut with Milk",
+      "price": 180,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 84
+    },
+    {
+      "name": "Ginger with Milk",
+      "price": 200,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Hot Drinks",
+      "sort_order": 85
+    },
+    {
+      "name": "Avocado",
+      "price": 230,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 86
+    },
+    {
+      "name": "Papaya",
+      "price": 230,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 87
+    },
+    {
+      "name": "Mango",
+      "price": 230,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 88
+    },
+    {
+      "name": "Pineapple",
+      "price": 230,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 89
+    },
+    {
+      "name": "Beso Juice",
+      "price": 230,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 90
+    },
+    {
+      "name": "Watermelon",
+      "price": 250,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 91
+    },
+    {
+      "name": "Mixed",
+      "price": 250,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 92
+    },
+    {
+      "name": "Beso with Milk",
+      "price": 300,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 93
+    },
+    {
+      "name": "Telba",
+      "price": 300,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 94
+    },
+    {
+      "name": "Orange",
+      "price": 400,
+      "image": "/images/juice.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Normal Juice",
+      "sort_order": 95
+    },
+    {
+      "name": "Iced Latte",
+      "price": 250,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 96
+    },
+    {
+      "name": "Iced Coffee",
+      "price": 250,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 97
+    },
+    {
+      "name": "Iced Caramel",
+      "price": 280,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 98
+    },
+    {
+      "name": "Iced Chocolate",
+      "price": 280,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 99
+    },
+    {
+      "name": "Iced Vanilla Matcha",
+      "price": 400,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 100
+    },
+    {
+      "name": "Iced Strawberry Matcha",
+      "price": 450,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 101
+    },
+    {
+      "name": "Ube Latte",
+      "price": 400,
+      "image": "/images/coffee.svg",
+      "category": "drinks",
+      "category_label": "Drinks",
+      "group_label": "Iced Beverages",
+      "sort_order": 102
+    },
+    {
+      "name": "Cooling Faster",
+      "price": 300,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 103
+    },
+    {
+      "name": "Strawberry Smoothie",
+      "price": 300,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 104
+    },
+    {
+      "name": "Body Builder",
+      "price": 300,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 105
+    },
+    {
+      "name": "Power",
+      "price": 350,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 106
+    },
+    {
+      "name": "Mind Set",
+      "price": 350,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 107
+    },
+    {
+      "name": "Special with Cream",
+      "price": 350,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 108
+    },
+    {
+      "name": "Temir",
+      "price": 350,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 109
+    },
+    {
+      "name": "Special Bikko Juice",
+      "price": 500,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Special Juice",
+      "sort_order": 110
+    },
+    {
+      "name": "Classical Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 111
+    },
+    {
+      "name": "Strawberry Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 112
+    },
+    {
+      "name": "Cinnamon Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 113
+    },
+    {
+      "name": "Pineapple Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 114
+    },
+    {
+      "name": "Blue Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 115
+    },
+    {
+      "name": "Red Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 116
+    },
+    {
+      "name": "Mint Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 117
+    },
+    {
+      "name": "Lemon Mojito",
+      "price": 250,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 118
+    },
+    {
+      "name": "Watermelon Mojito",
+      "price": 230,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 119
+    },
+    {
+      "name": "Espresso Mojito",
+      "price": 280,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 120
+    },
+    {
+      "name": "Special Mojito",
+      "price": 280,
+      "image": "/images/mojito.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Mojito",
+      "sort_order": 121
+    },
+    {
+      "name": "Special Shake",
+      "price": 500,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 122
+    },
+    {
+      "name": "Strawberry Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 123
+    },
+    {
+      "name": "Avocado Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 124
+    },
+    {
+      "name": "Avocado Berry Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 125
+    },
+    {
+      "name": "Papaya Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 126
+    },
+    {
+      "name": "Mango Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 127
+    },
+    {
+      "name": "Mixed Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 128
+    },
+    {
+      "name": "Protein Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 129
+    },
+    {
+      "name": "Banana Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 130
+    },
+    {
+      "name": "Smoothie Shake",
+      "price": 330,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 131
+    },
+    {
+      "name": "Chocolate Milk Shake",
+      "price": 350,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 132
+    },
+    {
+      "name": "Strawberry Milk Shake",
+      "price": 350,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 133
+    },
+    {
+      "name": "Vanilla Milk Shake",
+      "price": 350,
+      "image": "/images/shake.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Smoothies & Shakes",
+      "sort_order": 134
+    },
+    {
+      "name": "Water, 1/4 L",
+      "price": 30,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Soft Drinks",
+      "sort_order": 135
+    },
+    {
+      "name": "Water, 1/2 L",
+      "price": 50,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Soft Drinks",
+      "sort_order": 136
+    },
+    {
+      "name": "Soft Drink",
+      "price": 90,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Soft Drinks",
+      "sort_order": 137
+    },
+    {
+      "name": "Ambo Water",
+      "price": 90,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Soft Drinks",
+      "sort_order": 138
+    },
+    {
+      "name": "Yogurt",
+      "price": 150,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Soft Drinks",
+      "sort_order": 139
+    },
+    {
+      "name": "Take Away Box",
+      "price": 60,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Extras",
+      "sort_order": 140
+    },
+    {
+      "name": "Cup",
+      "price": 30,
+      "image": "/images/juice.svg",
+      "category": "fresh",
+      "category_label": "Fresh Drinks",
+      "group_label": "Extras",
+      "sort_order": 141
+    }
+  ]
+}
