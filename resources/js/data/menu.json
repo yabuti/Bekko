@@ -56,12 +56,12 @@
             {
               "name": "Normal Omelet",
               "price": 350,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/normal%20omlet.webp"
             },
             {
               "name": "Special Omelet",
               "price": 450,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/special%20omelet.webp"
             },
             {
               "name": "Bula with Butter",
@@ -906,7 +906,7 @@
     {
       "name": "Normal Omelet",
       "price": 350,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/normal%20omlet.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -915,7 +915,7 @@
     {
       "name": "Special Omelet",
       "price": 450,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/special%20omelet.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
