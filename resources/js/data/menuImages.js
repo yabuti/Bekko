@@ -7,6 +7,9 @@ export function itemImage(itemName, categoryId, groupLabel) {
   const name = itemName.toLowerCase()
   const group = (groupLabel || '').toLowerCase()
 
+  if (name === 'egg sandwich') return '/breakfast/egg%20sandwitch.webp'
+  if (name === 'egg sauce') return '/breakfast/egg%20sauce.webp'
+
   if (categoryId === 'breakfast') return photo('breakfast')
   if (categoryId === 'lunch') return photo('lunch')
 

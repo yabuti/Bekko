@@ -11,12 +11,12 @@
             {
               "name": "Egg Sandwich",
               "price": 250,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/egg%20sandwitch.webp"
             },
             {
               "name": "Egg Sauce",
               "price": 300,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/egg%20sauce.webp"
             },
             {
               "name": "Normal Ful",
@@ -825,7 +825,7 @@
     {
       "name": "Egg Sandwich",
       "price": 250,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/egg%20sandwitch.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -834,7 +834,7 @@
     {
       "name": "Egg Sauce",
       "price": 300,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/egg%20sauce.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
