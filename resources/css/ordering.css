@@ -97,6 +97,36 @@
   margin-bottom: 6px;
 }
 
+.item-detail-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.item-detail-trigger .item-image {
+  display: block;
+}
+
+.item-detail-trigger:hover .item-top h5 {
+  color: var(--green-700);
+}
+
+.item-detail-hint {
+  display: inline-block;
+  margin: 0 14px 10px;
+  color: var(--green-600);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .add-button,
 .quantity-control {
   justify-self: stretch;
@@ -1133,7 +1163,8 @@
 
 .admin-form input[type="text"],
 .admin-form input[type="number"],
-.admin-form select {
+.admin-form select,
+.admin-form textarea {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -1142,10 +1173,23 @@
   outline: none;
 }
 
+.admin-form textarea {
+  min-height: 68px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
 .admin-form input[type="text"]:focus,
 .admin-form input[type="number"]:focus,
-.admin-form select:focus {
+.admin-form select:focus,
+.admin-form textarea:focus {
   border-color: var(--green-600);
+}
+
+.admin-hint {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 400;
 }
 
 .admin-form-row {

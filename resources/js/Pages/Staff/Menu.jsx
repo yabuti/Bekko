@@ -29,6 +29,8 @@ export default function MenuManager({ categories = [], items = [] }) {
     name: '',
     category: categories[0]?.id ?? 'breakfast',
     group_label: '',
+    description: '',
+    ingredients: '',
     price: '',
     sort_order: '',
     photo: null,
@@ -99,6 +101,8 @@ export default function MenuManager({ categories = [], items = [] }) {
       name: item.name,
       category: item.category,
       group_label: item.group_label || '',
+      description: item.description || '',
+      ingredients: item.ingredients || '',
       price: String(item.price),
       sort_order: item.sort_order == null ? '' : String(item.sort_order),
       photo: null,
@@ -124,6 +128,8 @@ export default function MenuManager({ categories = [], items = [] }) {
     payload.append('name', form.name)
     payload.append('category', form.category)
     payload.append('group_label', form.group_label)
+    payload.append('description', form.description)
+    payload.append('ingredients', form.ingredients)
     payload.append('price', form.price)
     payload.append('sort_order', form.sort_order === '' ? '0' : form.sort_order)
     if (form.photo) payload.append('image', form.photo)
@@ -297,6 +303,29 @@ export default function MenuManager({ categories = [], items = [] }) {
                   {errors.group_label && <span className="field-error">{errors.group_label}</span>}
                 </label>
               </div>
+
+              <label>
+                <span>{t('staffMenu.fields.description')}</span>
+                <textarea
+                  value={form.description}
+                  maxLength={2000}
+                  rows={3}
+                  onChange={(event) => change('description', event.target.value)}
+                />
+                {errors.description && <span className="field-error">{errors.description}</span>}
+              </label>
+
+              <label>
+                <span>{t('staffMenu.fields.ingredients')}</span>
+                <textarea
+                  value={form.ingredients}
+                  maxLength={2000}
+                  rows={2}
+                  onChange={(event) => change('ingredients', event.target.value)}
+                />
+                <small className="admin-hint">{t('staffMenu.ingredientsHint')}</small>
+                {errors.ingredients && <span className="field-error">{errors.ingredients}</span>}
+              </label>
 
               <div className="admin-form-row">
                 <label>

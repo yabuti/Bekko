@@ -20,10 +20,13 @@ export default {
     "replacePhoto": "Replace photo",
     "uploadPhoto": "Upload photo",
     "photoHint": "JPG, PNG or WebP, up to 2 MB.",
+    "ingredientsHint": "Separate ingredients with commas or new lines.",
     "fields": {
       "name": "Meal name",
       "category": "Category",
       "group": "Group heading",
+      "description": "Description",
+      "ingredients": "Ingredients",
       "price": "Price (ETB)",
       "sortOrder": "Sort order",
       "photo": "Photo"

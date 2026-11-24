@@ -5,6 +5,7 @@ import { menu } from '../data/menu'
 import { itemImage } from '../data/menuImages'
 import { useI18n, useSite } from '../i18n/index.jsx'
 import Logo from './Logo'
+import MenuItemDetail from './MenuItemDetail'
 
 const categoryIcons = {
   breakfast: Coffee,
@@ -19,6 +20,7 @@ export default function MenuSection({ menuUrl, categories, items }) {
   const site = useSite()
   const sourceCategories = categories ?? menu
   const [active, setActive] = useState(sourceCategories[0]?.id ?? 'breakfast')
+  const [selected, setSelected] = useState(null)
 
   // Database-backed items are grouped here so admin edits show up on the public menu.
   const view = sourceCategories.map((category) => {
@@ -137,34 +139,49 @@ export default function MenuSection({ menuUrl, categories, items }) {
                 )}
 
                 <div className="formal-grid">
-                  {group.items.map((item, index) => (
-                    <article
-                      className={`formal-item${index % 2 === 1 ? ' is-reversed' : ''}`}
-                      key={item.id ?? item.name}
-                    >
-                      <div className="formal-item-photo">
-                        <img
-                          src={item.image || itemImage(item.name, category.id, group.label)}
-                          alt=""
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="formal-item-body">
-                        <div className="formal-item-top">
-                          <h5>{item.name}</h5>
-                          <span className="formal-item-price">{site.currency} {item.price}</span>
+                  {group.items.map((item, index) => {
+                    const image = item.image || itemImage(item.name, category.id, group.label)
+
+                    return (
+                      <button
+                        type="button"
+                        className={`formal-item${index % 2 === 1 ? ' is-reversed' : ''}`}
+                        key={item.id ?? item.name}
+                        onClick={() => setSelected({
+                          item: { ...item, image },
+                          category: categoryLabel(category.id, category.label),
+                          group: group.label,
+                        })}
+                        aria-label={`${t('menuDetail.view')}: ${item.name}`}
+                      >
+                        <div className="formal-item-photo">
+                          <img src={image} alt="" loading="lazy" />
                         </div>
-                        {item.tag && <span className="formal-item-tag">{item.tag}</span>}
-                        {item.description && <p className="formal-item-description">{item.description}</p>}
-                      </div>
-                    </article>
-                  ))}
+                        <div className="formal-item-body">
+                          <div className="formal-item-top">
+                            <h5>{item.name}</h5>
+                            <span className="formal-item-price">{site.currency} {item.price}</span>
+                          </div>
+                          {item.tag && <span className="formal-item-tag">{item.tag}</span>}
+                          {item.description && <p className="formal-item-description">{item.description}</p>}
+                        </div>
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
             ))
           })}
         </div>
       </div>
+
+      <MenuItemDetail
+        item={selected?.item}
+        category={selected?.category}
+        group={selected?.group}
+        currency={site.currency}
+        onClose={() => setSelected(null)}
+      />
     </section>
   )
 }

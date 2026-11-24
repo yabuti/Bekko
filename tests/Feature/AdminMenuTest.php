@@ -68,6 +68,8 @@ class AdminMenuTest extends TestCase
                 'name' => 'New Special Coffee',
                 'category' => 'drinks',
                 'group_label' => 'Hot Drinks',
+                'description' => 'A smooth espresso with steamed milk.',
+                'ingredients' => "Espresso\nSteamed milk",
                 'price' => 180,
                 'sort_order' => 0,
             ])
@@ -78,6 +80,8 @@ class AdminMenuTest extends TestCase
             'category' => 'drinks',
             'category_label' => 'Drinks',
             'group_label' => 'Hot Drinks',
+            'description' => 'A smooth espresso with steamed milk.',
+            'ingredients' => "Espresso\nSteamed milk",
             'price' => 180,
             'image' => '/images/coffee.svg',
         ]);
@@ -113,6 +117,20 @@ class AdminMenuTest extends TestCase
             'image' => UploadedFile::fake()->create('notes.txt', 10, 'text/plain'),
         ])->assertSessionHasErrors('image');
 
+        $this->actingAs($admin)->post(route('staff.menu.store'), [
+            'name' => 'Long Description',
+            'category' => 'drinks',
+            'price' => 100,
+            'description' => str_repeat('a', 2001),
+        ])->assertSessionHasErrors('description');
+
+        $this->actingAs($admin)->post(route('staff.menu.store'), [
+            'name' => 'Long Ingredients',
+            'category' => 'drinks',
+            'price' => 100,
+            'ingredients' => str_repeat('b', 2001),
+        ])->assertSessionHasErrors('ingredients');
+
         $this->assertDatabaseCount('menu_items', 1);
     }
 
@@ -130,6 +148,8 @@ class AdminMenuTest extends TestCase
                 'name' => 'Renamed Meal',
                 'category' => 'breakfast',
                 'group_label' => 'Main',
+                'description' => 'Freshly baked and served warm.',
+                'ingredients' => 'Flour, Butter, Eggs',
                 'price' => 350,
                 'sort_order' => 5,
             ])
@@ -139,6 +159,8 @@ class AdminMenuTest extends TestCase
             'id' => $item->id,
             'name' => 'Renamed Meal',
             'group_label' => 'Main',
+            'description' => 'Freshly baked and served warm.',
+            'ingredients' => 'Flour, Butter, Eggs',
             'price' => 350,
             'sort_order' => 5,
         ]);
@@ -229,6 +251,8 @@ class AdminMenuTest extends TestCase
         $item = MenuItem::factory()->create([
             'name' => 'Admin Added Special',
             'category' => 'breakfast',
+            'description' => 'Served with honey and fresh fruit.',
+            'ingredients' => "Injera\nHoney\nFruit",
             'price' => 777,
         ]);
 
@@ -238,6 +262,8 @@ class AdminMenuTest extends TestCase
                 ->component('Menu')
                 ->where('items.0.name', 'Admin Added Special')
                 ->where('items.0.price', 777)
+                ->where('items.0.description', 'Served with honey and fresh fruit.')
+                ->where('items.0.ingredients', "Injera\nHoney\nFruit")
                 ->etc());
 
         $table = CafeTable::create(['code' => 'T99', 'name' => 'Test Table']);
@@ -247,6 +273,8 @@ class AdminMenuTest extends TestCase
             ->assertInertia(fn (AssertableInertia $page) => $page
                 ->component('CustomerMenu')
                 ->where('items.0.name', 'Admin Added Special')
+                ->where('items.0.description', 'Served with honey and fresh fruit.')
+                ->where('items.0.ingredients', "Injera\nHoney\nFruit")
                 ->etc());
     }
 }

@@ -21,13 +21,13 @@ class MenuController extends Controller
             'items' => MenuItem::query()
                 ->orderBy('sort_order')
                 ->orderBy('id')
-                ->get(['id', 'category', 'category_label', 'group_label', 'name', 'price', 'image', 'sort_order']),
+                ->get(['id', 'category', 'category_label', 'group_label', 'name', 'description', 'ingredients', 'price', 'image', 'sort_order']),
         ]);
     }
 
     public function store(SaveMenuItemRequest $request): RedirectResponse
     {
-        $data = $request->safe()->only(['name', 'category', 'group_label', 'price', 'sort_order']);
+        $data = $request->safe()->only(['name', 'category', 'group_label', 'description', 'ingredients', 'price', 'sort_order']);
         $data['category_label'] = $this->categoryLabel($data['category']);
         $data['sort_order'] ??= (int) MenuItem::max('sort_order') + 1;
         $data['image'] = $request->hasFile('image')
@@ -41,7 +41,7 @@ class MenuController extends Controller
 
     public function update(SaveMenuItemRequest $request, MenuItem $menuItem): RedirectResponse
     {
-        $data = $request->safe()->only(['name', 'category', 'group_label', 'price', 'sort_order']);
+        $data = $request->safe()->only(['name', 'category', 'group_label', 'description', 'ingredients', 'price', 'sort_order']);
         $data['category_label'] = $this->categoryLabel($data['category']);
 
         if ($request->hasFile('image')) {

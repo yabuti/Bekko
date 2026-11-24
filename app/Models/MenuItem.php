@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-#[Fillable(['category', 'category_label', 'group_label', 'name', 'price', 'image', 'sort_order'])]
+#[Fillable(['category', 'category_label', 'group_label', 'name', 'description', 'ingredients', 'price', 'image', 'sort_order'])]
 class MenuItem extends Model
 {
     use HasFactory;

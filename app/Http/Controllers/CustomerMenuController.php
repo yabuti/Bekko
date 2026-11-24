@@ -38,7 +38,7 @@ class CustomerMenuController extends Controller
             ),
             'items' => MenuItem::query()
                 ->orderBy('sort_order')
-                ->get(['id', 'category', 'group_label', 'name', 'price', 'image']),
+                ->get(['id', 'category', 'group_label', 'name', 'description', 'ingredients', 'price', 'image']),
         ]);
     }
 }

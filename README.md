@@ -79,11 +79,14 @@ Sign in as the admin and open `/staff/menu` (admins are sent there after login).
 
 - add a new meal with a name, category, group heading, price and display order
 - edit an existing meal's name, price, group or category
+- write a full description and an ingredient list (separate ingredients with commas or new lines)
 - upload, replace or remove a meal photo (JPG, PNG or WebP, up to 2 MB)
 
 Photos are stored in `public/menu-photos/` and appear straight away on `/menu` and on the customer QR menu. Deleting a meal keeps it out of both menus while preserving old order lines.
 
-> Reseeding with `MenuItemSeeder` restores prices and photos from `menu.json`, which will overwrite changes made in the admin page. Do not reseed after editing the menu in the admin page.
+Clicking a meal on `/menu` opens a detail view with its photo, full description, ingredients and price. On `/t/{code}` the same detail view includes an **Add to order** button, so customers can read about a dish before ordering it.
+
+> Reseeding with `MenuItemSeeder` restores prices and photos from `menu.json`, which will overwrite changes made in the admin page. Descriptions and ingredients are not in `menu.json`, so they are left alone by reseeding. Do not reseed after editing the menu in the admin page.
 
 ## Editing content
 

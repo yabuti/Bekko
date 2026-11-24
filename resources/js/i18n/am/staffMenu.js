@@ -20,10 +20,13 @@ export default {
     "replacePhoto": "ፎቶ ቀይር",
     "uploadPhoto": "ፎቶ ጫን",
     "photoHint": "JPG፣ PNG ወይም WebP፣ እስከ 2 MB።",
+    "ingredientsHint": "ንጥረ ነገሮችን በኮማ ወይም በአዲስ መስመር ይለዩ።",
     "fields": {
       "name": "የምግብ ስም",
       "category": "ምድብ",
       "group": "የቡድን ርዕስ",
+      "description": "መግለጫ",
+      "ingredients": "ንጥረ ነገሮች",
       "price": "ዋጋ (ETB)",
       "sortOrder": "የማሳያ ቅደም ተከተል",
       "photo": "ፎቶ"

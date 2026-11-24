@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { router, usePage } from '@inertiajs/react'
 import { ArrowLeft, Minus, Plus, ShoppingBag } from 'lucide-react'
 import LanguageSwitcher from '../Components/LanguageSwitcher'
+import MenuItemDetail from '../Components/MenuItemDetail'
+import { itemImage } from '../data/menuImages'
 import { useI18n, useSite } from '../i18n/index.jsx'
 
 export default function CustomerMenu({ table, categories, items }) {
@@ -13,6 +15,7 @@ export default function CustomerMenu({ table, categories, items }) {
   const [cart, setCart] = useState({})
   const [notes, setNotes] = useState('')
   const [placing, setPlacing] = useState(false)
+  const [selected, setSelected] = useState(null)
 
   const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
     ? fallback
@@ -64,6 +67,15 @@ export default function CustomerMenu({ table, categories, items }) {
       if (quantity <= 0) delete next[id]
       else next[id] = quantity
       return next
+    })
+  }
+
+  const openDetail = (item) => {
+    const category = grouped.find((entry) => entry.id === item.category)
+    setSelected({
+      item: { ...item, image: item.image || itemImage(item.name, item.category, item.group_label) },
+      category: categoryLabel(item.category, category?.label),
+      group: item.group_label,
     })
   }
 
@@ -122,13 +134,26 @@ export default function CustomerMenu({ table, categories, items }) {
                 <div className="category-items">
                   {group.items.map((item) => (
                     <article className="menu-item order-item" key={item.id}>
-                      <img className="item-image" src={item.image} alt="" loading="lazy" />
-                      <div className="item-info">
-                        <div className="item-top">
-                          <h5>{item.name}</h5>
+                      <button
+                        type="button"
+                        className="item-detail-trigger"
+                        onClick={() => openDetail(item)}
+                        aria-label={`${t('menuDetail.view')}: ${item.name}`}
+                      >
+                        <img
+                          className="item-image"
+                          src={item.image || itemImage(item.name, item.category, item.group_label)}
+                          alt=""
+                          loading="lazy"
+                        />
+                        <div className="item-info">
+                          <div className="item-top">
+                            <h5>{item.name}</h5>
+                          </div>
+                          <span className="item-price">{currency} {item.price}</span>
+                          <span className="item-detail-hint">{t('menuDetail.view')}</span>
                         </div>
-                        <span className="item-price">{currency} {item.price}</span>
-                      </div>
+                      </button>
                       {cart[item.id] ? (
                         <div className="quantity-control">
                           <button type="button" onClick={() => changeQuantity(item.id, -1)} aria-label={t('customerMenu.removeOne', { item: item.name })}>
@@ -189,6 +214,25 @@ export default function CustomerMenu({ table, categories, items }) {
         {errors.items && <p className="cart-error container">{errors.items}</p>}
         {errors.notes && <p className="cart-error container">{errors.notes}</p>}
       </div>
+
+      <MenuItemDetail
+        item={selected?.item}
+        category={selected?.category}
+        group={selected?.group}
+        currency={currency}
+        onClose={() => setSelected(null)}
+      >
+        <button
+          type="button"
+          className="button button-primary"
+          onClick={() => {
+            changeQuantity(selected.item.id, 1)
+            setSelected(null)
+          }}
+        >
+          <Plus size={16} /> {t('menuDetail.addToOrder')}
+        </button>
+      </MenuItemDetail>
     </div>
   )
 }

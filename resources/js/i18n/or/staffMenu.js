@@ -20,10 +20,13 @@ export default {
     "replacePhoto": "Suuraa jijjiiri",
     "uploadPhoto": "Suuraa ka'i",
     "photoHint": "JPG, PNG ykn WebP, hanga 2 MB.",
+    "ingredientsHint": "Madda nyaa komaan ykn sarboo haaraa kkutuun addaasa'a.",
     "fields": {
       "name": "Maqaa nyaa",
       "category": "Kutaa",
       "group": "Mata duree kutaa",
+      "description": "Ibsa",
+      "ingredients": "Madda nyaa",
       "price": "Gatii (ETB)",
       "sortOrder": "Kaayyoo agaa'ii",
       "photo": "Suuraa"

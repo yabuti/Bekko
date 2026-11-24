@@ -30,6 +30,8 @@ class SaveMenuItemRequest extends FormRequest
             'name' => ['required', 'string', 'max:255', $nameRule],
             'category' => ['required', Rule::in(config('site.menu_categories'))],
             'group_label' => ['nullable', 'string', 'max:255'],
+            'description' => ['nullable', 'string', 'max:2000'],
+            'ingredients' => ['nullable', 'string', 'max:2000'],
             'price' => ['required', 'integer', 'min:0', 'max:1000000'],
             'sort_order' => ['nullable', 'integer', 'min:0', 'max:100000'],
             'image' => ['nullable', 'file', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],

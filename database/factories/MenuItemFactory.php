@@ -22,6 +22,8 @@ class MenuItemFactory extends Factory
             'category_label' => 'Lunch',
             'group_label' => null,
             'name' => fake()->unique()->words(3, true),
+            'description' => fake()->sentence(10),
+            'ingredients' => implode(', ', fake()->words(4)),
             'price' => fake()->numberBetween(100, 1500),
             'image' => '/images/lunch.svg',
             'sort_order' => fake()->numberBetween(0, 1000),
