@@ -1,7 +1,6 @@
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import Highlights from '../Components/Highlights'
-import MenuSection from '../Components/MenuSection'
 import Story from '../Components/Story'
 import FindUs from '../Components/FindUs'
 import Footer from '../Components/Footer'
@@ -17,7 +16,6 @@ export default function Home() {
       <main>
         <Hero />
         <Highlights />
-        <MenuSection menuUrl={qrUrl} />
         <Story />
         <FindUs menuUrl={qrUrl} />
       </main>

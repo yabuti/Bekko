@@ -11,6 +11,7 @@ use App\Http\Controllers\StaffAuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
 
 Route::get('/t/{cafeTable:code}', [CustomerMenuController::class, 'show'])->name('tables.menu');
 Route::post('/t/{cafeTable:code}/orders', [OrderController::class, 'store'])->name('orders.store');

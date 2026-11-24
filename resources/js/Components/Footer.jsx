@@ -15,10 +15,10 @@ export default function Footer() {
 
         <div className="footer-col">
           <h4>Explore</h4>
-          <a href="#home">Home</a>
-          <a href="#menu">Menu</a>
-          <a href="#story">Our story</a>
-          <a href="#visit">Find us</a>
+          <a href="/#home">Home</a>
+          <a href="/menu">Menu</a>
+          <a href="/#story">Our story</a>
+          <a href="/#visit">Find us</a>
         </div>
 
         <div className="footer-col">
@@ -43,7 +43,7 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <span>© {year} {site.name}. Made with love.</span>
-        <a href="#home">Back to top ↑</a>
+        <a href="/#home">Back to top ↑</a>
       </div>
     </footer>
   )

@@ -11,4 +11,9 @@ class HomeController extends Controller
     {
         return Inertia::render('Home');
     }
+
+    public function menu(): Response
+    {
+        return Inertia::render('Menu');
+    }
 }

@@ -63,7 +63,8 @@ Change these passwords before using the app in a real cafe.
 
 | URL | Purpose |
 | --- | --- |
-| `/` | Public homepage and full menu |
+| `/` | Public homepage |
+| `/menu` | Full public menu (also printable) |
 | `/t/T1` | Customer menu for Table 1 (change the code for other tables) |
 | `/orders/{token}` | Customer order tracking link |
 | `/staff/login` | Staff sign-in |

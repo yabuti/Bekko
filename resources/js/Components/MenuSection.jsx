@@ -50,7 +50,7 @@ export default function MenuSection({ menuUrl }) {
 
       <div className="container">
         <div className="menu-page-nav">
-          <a href="#home">← Back to home</a>
+          <a href="/">← Back to home</a>
           <span>Menu</span>
         </div>
 

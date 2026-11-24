@@ -34,10 +34,10 @@ export default function Hero() {
           <p className="hero-description">{site.description}</p>
 
           <div className="hero-actions">
-            <a className="button button-primary button-large" href="#menu">
-              Explore the menu <ArrowRight size={18} />
+            <a className="button button-primary button-large" href="/menu">
+              See the menu <ArrowRight size={18} />
             </a>
-            <a className="button button-ghost button-large" href="#visit">
+            <a className="button button-ghost button-large" href="/#visit">
               <MapPin size={18} /> Find us
             </a>
           </div>

@@ -3,10 +3,10 @@ import { ArrowUpRight, Menu as MenuIcon, X } from 'lucide-react'
 import Logo from './Logo'
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'Menu', href: '#menu' },
-  { label: 'Our story', href: '#story' },
-  { label: 'Find us', href: '#visit' },
+  { label: 'Home', href: '/#home' },
+  { label: 'Menu', href: '/menu' },
+  { label: 'Our story', href: '/#story' },
+  { label: 'Find us', href: '/#visit' },
 ]
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="container header-inner">
-        <a href="#home" className="brand" aria-label="Back to top">
+        <a href="/#home" className="brand" aria-label="Back to top">
           <Logo className="brand-logo" />
         </a>
 
@@ -35,14 +35,14 @@ export default function Header() {
           ))}
           <a
             className="nav-mobile-cta"
-            href="#menu"
+            href="/menu"
             onClick={() => setOpen(false)}
           >
             See the menu <ArrowUpRight size={16} />
           </a>
         </nav>
 
-        <a className="button button-primary header-cta" href="#menu">
+        <a className="button button-primary header-cta" href="/menu">
           See the menu <ArrowUpRight size={17} />
         </a>
 
