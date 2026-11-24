@@ -1,20 +1,23 @@
 import { ArrowRight, Beef, Coffee, GlassWater, Leaf, MapPin, Sparkles } from 'lucide-react'
-import { site } from '../data/site'
+import { useI18n, useSite } from '../i18n/index.jsx'
 import Logo from './Logo'
 
-const floatingCards = [
-  { icon: GlassWater, label: 'Fresh juice', className: 'float-juice' },
-  { icon: Beef, label: 'Big burgers', className: 'float-burger' },
-  { icon: Coffee, label: 'Good coffee', className: 'float-coffee' },
-]
-
-const perks = [
-  { icon: Leaf, text: 'Pressed & prepared fresh' },
-  { icon: Sparkles, text: 'Made to order, always' },
-  { icon: Coffee, text: 'Something for everyone' },
-]
-
 export default function Hero() {
+  const { t } = useI18n()
+  const site = useSite()
+
+  const floatingCards = [
+    { icon: GlassWater, label: t('home.hero.floating.juice'), className: 'float-juice' },
+    { icon: Beef, label: t('home.hero.floating.burgers'), className: 'float-burger' },
+    { icon: Coffee, label: t('home.hero.floating.coffee'), className: 'float-coffee' },
+  ]
+
+  const perks = [
+    { icon: Leaf, text: t('home.hero.perks.0.text') },
+    { icon: Sparkles, text: t('home.hero.perks.1.text') },
+    { icon: Coffee, text: t('home.hero.perks.2.text') },
+  ]
+
   return (
     <section className="hero" id="home">
       <div className="hero-glow hero-glow-one" />
@@ -27,18 +30,18 @@ export default function Hero() {
           </span>
 
           <h1>
-            Fresh juice. Big burgers.{' '}
-            <span className="text-green">Really good coffee.</span>
+            {t('home.hero.title1')}{' '}
+            <span className="text-green">{t('home.hero.title2')}</span>
           </h1>
 
           <p className="hero-description">{site.description}</p>
 
           <div className="hero-actions">
             <a className="button button-primary button-large" href="/menu">
-              See the menu <ArrowRight size={18} />
+              {t('common.nav.seeMenu')} <ArrowRight size={18} />
             </a>
             <a className="button button-ghost button-large" href="/#visit">
-              <MapPin size={18} /> Find us
+              <MapPin size={18} /> {t('home.hero.findUs')}
             </a>
           </div>
 
@@ -56,14 +59,14 @@ export default function Hero() {
           <div className="visual-blob" />
           <div className="visual-card">
             <div className="visual-card-inner">
-              <span className="visual-kicker">Welcome to</span>
+              <span className="visual-kicker">{t('home.hero.welcome')}</span>
               <Logo className="visual-logo" />
               <span className="visual-line" />
-              <span className="visual-caption">Juice · Burgers · Coffee</span>
+              <span className="visual-caption">{t('home.hero.caption')}</span>
             </div>
           </div>
 
-          <span className="open-sticker">OPEN<br />TODAY</span>
+          <span className="open-sticker">{t('home.hero.openToday')}<br />{t('home.hero.openToday2')}</span>
 
           {floatingCards.map(({ icon: Icon, label, className }) => (
             <div className={`float-card ${className}`} key={label}>

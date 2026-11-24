@@ -1,5 +1,6 @@
 import { createInertiaApp } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'
+import { I18nProvider } from './i18n/index.jsx'
 import '../css/app.css'
 import '../css/ordering.css'
 
@@ -9,6 +10,10 @@ createInertiaApp({
     return pages[`./Pages/${name}.jsx`]
   },
   setup({ el, App, props }) {
-    createRoot(el).render(<App {...props} />)
+    createRoot(el).render(
+      <I18nProvider>
+        <App {...props} />
+      </I18nProvider>,
+    )
   },
 })

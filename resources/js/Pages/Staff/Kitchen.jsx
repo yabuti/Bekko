@@ -2,8 +2,13 @@ import { useEffect } from 'react'
 import { router } from '@inertiajs/react'
 import OrderCard from '../../Components/OrderCard'
 import Staff from '../../Layouts/Staff'
+import { useI18n, useSite } from '../../i18n/index.jsx'
 
-export default function Kitchen({ site, orders }) {
+export default function Kitchen({ orders }) {
+  const { t } = useI18n()
+  const site = useSite()
+  const currency = site.currency || 'ETB'
+
   useEffect(() => {
     const timer = window.setInterval(() => {
       router.reload({ only: ['orders'], preserveState: true })
@@ -13,26 +18,26 @@ export default function Kitchen({ site, orders }) {
   }, [])
 
   const actionsFor = (status) => {
-    if (status === 'new') return [{ label: 'Start preparing', status: 'preparing' }]
-    if (status === 'preparing') return [{ label: 'Mark ready', status: 'ready' }]
+    if (status === 'new') return [{ label: t('staffKitchen.startPreparing'), status: 'preparing' }]
+    if (status === 'preparing') return [{ label: t('staffKitchen.markReady'), status: 'ready' }]
     return []
   }
 
   return (
     <Staff
-      title="Kitchen dashboard"
-      subtitle="New tickets appear here the moment a customer orders."
+      title={t('staffKitchen.title')}
+      subtitle={t('staffKitchen.subtitle')}
     >
       <div className="staff-order-grid staff-order-grid-wide">
         {orders.map((order) => (
           <OrderCard
             key={order.id}
             order={order}
-            currency={site?.currency || 'ETB'}
+            currency={currency}
             actions={actionsFor(order.status)}
           />
         ))}
-        {!orders.length && <p className="staff-empty">The kitchen is clear. Nice work.</p>}
+        {!orders.length && <p className="staff-empty">{t('staffKitchen.clear')}</p>}
       </div>
     </Staff>
   )

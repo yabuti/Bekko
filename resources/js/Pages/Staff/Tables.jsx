@@ -1,8 +1,10 @@
 import { Printer, QrCode } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import Staff from '../../Layouts/Staff'
+import { useI18n } from '../../i18n/index.jsx'
 
 export default function Tables({ tables }) {
+  const { t } = useI18n()
   const urlFor = (code) => {
     const origin = typeof window === 'undefined' ? '' : window.location.origin
     return `${origin}/t/${code}`
@@ -10,13 +12,13 @@ export default function Tables({ tables }) {
 
   return (
     <Staff
-      title="Table QR codes"
-      subtitle="Print one code per table and place it where customers can scan it."
+      title={t('staffTables.title')}
+      subtitle={t('staffTables.subtitle')}
     >
       <div className="qr-toolbar">
-        <span><QrCode size={16} /> {tables.length} tables ready</span>
+        <span><QrCode size={16} /> {t('staffTables.ready', { count: tables.length })}</span>
         <button type="button" className="button button-primary" onClick={() => window.print()}>
-          <Printer size={16} /> Print all QR codes
+          <Printer size={16} /> {t('staffTables.printAll')}
         </button>
       </div>
 

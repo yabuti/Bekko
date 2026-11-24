@@ -71,7 +71,7 @@
             {
               "name": "Bula with Kitfo",
               "price": 800,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/bula%20with%20kitfo.webp"
             },
             {
               "name": "Fasting Bula",
@@ -81,7 +81,7 @@
             {
               "name": "Kinche",
               "price": 350,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/kinche.webp"
             },
             {
               "name": "Kinche with Egg",
@@ -96,17 +96,17 @@
             {
               "name": "Firfir with Butter",
               "price": 300,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/frfr.webp"
             },
             {
               "name": "Tibs Firfir",
               "price": 450,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/tibs%20firfir.webp"
             },
             {
               "name": "Kuanta Firfir",
               "price": 500,
-              "image": "/images/breakfast.svg"
+              "image": "/breakfast/kuanta%20frfr.webp"
             },
             {
               "name": "Fasting Firfir",
@@ -128,52 +128,52 @@
             {
               "name": "Pasta with Sauce",
               "price": 250,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/pasta%20with%20sauce.webp"
             },
             {
               "name": "Pasta with Vegetable",
               "price": 250,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/pasta%20with%20vegitable.webp"
             },
             {
               "name": "Pasta with Meat",
               "price": 380,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/pasta%20with%20meat.webp"
             },
             {
               "name": "Chicken Rice",
               "price": 430,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/chicken%20rice.webp"
             },
             {
               "name": "Beef Rice",
               "price": 380,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/rice%20with%20beef.webp"
             },
             {
               "name": "Rice with Vegetable",
               "price": 250,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/Rice%20with%20Vegetable.webp"
             },
             {
               "name": "Chicken Tibs",
               "price": 900,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/chicken%20tibs.webp"
             },
             {
               "name": "Chikina Tibs",
               "price": 800,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/Chikina%20Tibs.webp"
             },
             {
               "name": "Shiro with Butter",
               "price": 300,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/Shiro%20with%20Butter.webp"
             },
             {
               "name": "Shiro with Salad",
               "price": 350,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/Shiro%20with%20Salad.webp"
             },
             {
               "name": "Fasting Shiro",
@@ -193,7 +193,7 @@
             {
               "name": "Normal Meser",
               "price": 250,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/meser.webp"
             },
             {
               "name": "Half Half (Shiro/Meser)",
@@ -208,7 +208,7 @@
             {
               "name": "Timatim Lebleb",
               "price": 280,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/timatim%20lebleb.webp"
             }
           ]
         }
@@ -225,17 +225,17 @@
             {
               "name": "Special Pizza",
               "price": 850,
-              "image": "/images/pizza.svg"
+              "image": "/lunch/Special%20Pizza.webp"
             },
             {
               "name": "Beef Pizza",
               "price": 680,
-              "image": "/images/pizza.svg"
+              "image": "/lunch/Beef%20Pizza.webp"
             },
             {
               "name": "Chicken Pizza",
               "price": 750,
-              "image": "/images/pizza.svg"
+              "image": "/lunch/Chicken%20Pizza.webp"
             },
             {
               "name": "Tuna Pizza",
@@ -245,12 +245,12 @@
             {
               "name": "Margherita",
               "price": 580,
-              "image": "/images/pizza.svg"
+              "image": "/lunch/Margherita.webp"
             },
             {
               "name": "Vegetable Pizza",
               "price": 500,
-              "image": "/images/pizza.svg"
+              "image": "/lunch/Vegetable%20Pizza.webp"
             }
           ]
         },
@@ -260,32 +260,32 @@
             {
               "name": "Special Burger",
               "price": 850,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Special%20Burger.webp"
             },
             {
               "name": "Cheese Burger",
               "price": 550,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Cheese%20Burger.webp"
             },
             {
               "name": "Double Cheese Burger",
               "price": 700,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Double%20Cheese%20Burger.webp"
             },
             {
               "name": "Beef Burger",
               "price": 450,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Beef%20Burger.webp"
             },
             {
               "name": "Double Beef Burger",
               "price": 650,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Double%20Beef%20Burger.webp"
             },
             {
               "name": "Chips",
               "price": 250,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Chips.webp"
             }
           ]
         },
@@ -300,12 +300,12 @@
             {
               "name": "Mixed Fruit Salad",
               "price": 450,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/Mixed%20Fruit%20Salad.webp"
             },
             {
               "name": "Special Salad",
               "price": 600,
-              "image": "/images/lunch.svg"
+              "image": "/lunch/Special%20Salad.webp"
             },
             {
               "name": "Tuna Salad",
@@ -320,7 +320,7 @@
             {
               "name": "Fruit Punch",
               "price": 300,
-              "image": "/images/juice.svg"
+              "image": "/lunch/Fruit%20Punch.webp"
             }
           ]
         },
@@ -330,12 +330,12 @@
             {
               "name": "Beef Club Sandwich",
               "price": 500,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Beef%20Club%20Sandwich.webp"
             },
             {
               "name": "Tuna Club Sandwich",
               "price": 500,
-              "image": "/images/burger.svg"
+              "image": "/lunch/tuna%20Club%20Sandwich.webp"
             },
             {
               "name": "Mixed Club Sandwich",
@@ -345,7 +345,7 @@
             {
               "name": "Chicken Club Sandwich",
               "price": 600,
-              "image": "/images/burger.svg"
+              "image": "/lunch/chicken%20ckub%20sandwich.webp"
             }
           ]
         },
@@ -360,12 +360,12 @@
             {
               "name": "Chicken Burrito",
               "price": 650,
-              "image": "/images/burger.svg"
+              "image": "/lunch/Chicken%20Burrito.webp"
             },
             {
               "name": "Beef Burrito",
               "price": 650,
-              "image": "/images/burger.svg"
+              "image": "/lunch/beef%20Burrito.webp"
             }
           ]
         }
@@ -382,67 +382,67 @@
             {
               "name": "Traditional Coffee",
               "price": 60,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Traditional%20Coffee.webp"
             },
             {
               "name": "Steam Coffee",
               "price": 70,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Steam%20Coffee.webp"
             },
             {
               "name": "Espresso",
               "price": 90,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Espresso.webp"
             },
             {
               "name": "Macchiato",
               "price": 120,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Macchiato.webp"
             },
             {
               "name": "Americano",
               "price": 130,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Americano.webp"
             },
             {
               "name": "Milk",
               "price": 120,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Milk.webp"
             },
             {
               "name": "Hot Chocolate",
               "price": 220,
-              "image": "/images/coffee.svg"
+              "image": "/drink/hot%20chocolate.webp"
             },
             {
               "name": "Hot Caramel",
               "price": 220,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Hot%20Caramel.webp"
             },
             {
               "name": "Cappuccino",
               "price": 240,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Cappuccino.webp"
             },
             {
               "name": "Tea",
               "price": 50,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Tea.webp"
             },
             {
               "name": "Tosign Tea",
               "price": 70,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Tosign%20Tea.webp"
             },
             {
               "name": "Ginger Tea",
               "price": 70,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Ginger%20Tea.webp"
             },
             {
               "name": "Lemon Tea",
               "price": 70,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Lemon%20Tea.webp"
             },
             {
               "name": "Ginger (Keshir)",
@@ -457,12 +457,12 @@
             {
               "name": "Moringa",
               "price": 90,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Moringa%20tea.webp"
             },
             {
               "name": "Pineapple Tea",
               "price": 120,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Pineapple%20Tea.webp"
             },
             {
               "name": "Orange Tea",
@@ -477,7 +477,7 @@
             {
               "name": "Peanut Tea",
               "price": 140,
-              "image": "/images/coffee.svg"
+              "image": "/drink/Peanut%20Tea.webp"
             },
             {
               "name": "Tea Corenti",
@@ -933,7 +933,7 @@
     {
       "name": "Bula with Kitfo",
       "price": 800,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/bula%20with%20kitfo.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -951,7 +951,7 @@
     {
       "name": "Kinche",
       "price": 350,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/kinche.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -978,7 +978,7 @@
     {
       "name": "Firfir with Butter",
       "price": 300,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/frfr.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -987,7 +987,7 @@
     {
       "name": "Tibs Firfir",
       "price": 450,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/tibs%20firfir.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -996,7 +996,7 @@
     {
       "name": "Kuanta Firfir",
       "price": 500,
-      "image": "/images/breakfast.svg",
+      "image": "/breakfast/kuanta%20frfr.webp",
       "category": "breakfast",
       "category_label": "Breakfast",
       "group_label": null,
@@ -1014,7 +1014,7 @@
     {
       "name": "Pasta with Sauce",
       "price": 250,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/pasta%20with%20sauce.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1023,7 +1023,7 @@
     {
       "name": "Pasta with Vegetable",
       "price": 250,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/pasta%20with%20vegitable.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1032,7 +1032,7 @@
     {
       "name": "Pasta with Meat",
       "price": 380,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/pasta%20with%20meat.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1041,7 +1041,7 @@
     {
       "name": "Chicken Rice",
       "price": 430,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/chicken%20rice.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1050,7 +1050,7 @@
     {
       "name": "Beef Rice",
       "price": 380,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/rice%20with%20beef.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1059,7 +1059,7 @@
     {
       "name": "Rice with Vegetable",
       "price": 250,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/Rice%20with%20Vegetable.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1068,7 +1068,7 @@
     {
       "name": "Chicken Tibs",
       "price": 900,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/chicken%20tibs.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1077,7 +1077,7 @@
     {
       "name": "Chikina Tibs",
       "price": 800,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/Chikina%20Tibs.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1086,7 +1086,7 @@
     {
       "name": "Shiro with Butter",
       "price": 300,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/Shiro%20with%20Butter.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1095,7 +1095,7 @@
     {
       "name": "Shiro with Salad",
       "price": 350,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/Shiro%20with%20Salad.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1131,7 +1131,7 @@
     {
       "name": "Normal Meser",
       "price": 250,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/meser.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1158,7 +1158,7 @@
     {
       "name": "Timatim Lebleb",
       "price": 280,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/timatim%20lebleb.webp",
       "category": "lunch",
       "category_label": "Lunch",
       "group_label": null,
@@ -1167,7 +1167,7 @@
     {
       "name": "Special Pizza",
       "price": 850,
-      "image": "/images/pizza.svg",
+      "image": "/lunch/Special%20Pizza.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Pizza",
@@ -1176,7 +1176,7 @@
     {
       "name": "Beef Pizza",
       "price": 680,
-      "image": "/images/pizza.svg",
+      "image": "/lunch/Beef%20Pizza.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Pizza",
@@ -1185,7 +1185,7 @@
     {
       "name": "Chicken Pizza",
       "price": 750,
-      "image": "/images/pizza.svg",
+      "image": "/lunch/Chicken%20Pizza.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Pizza",
@@ -1203,7 +1203,7 @@
     {
       "name": "Margherita",
       "price": 580,
-      "image": "/images/pizza.svg",
+      "image": "/lunch/Margherita.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Pizza",
@@ -1212,7 +1212,7 @@
     {
       "name": "Vegetable Pizza",
       "price": 500,
-      "image": "/images/pizza.svg",
+      "image": "/lunch/Vegetable%20Pizza.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Pizza",
@@ -1221,7 +1221,7 @@
     {
       "name": "Special Burger",
       "price": 850,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Special%20Burger.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burgers & Chips",
@@ -1230,7 +1230,7 @@
     {
       "name": "Cheese Burger",
       "price": 550,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Cheese%20Burger.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burgers & Chips",
@@ -1239,7 +1239,7 @@
     {
       "name": "Double Cheese Burger",
       "price": 700,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Double%20Cheese%20Burger.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burgers & Chips",
@@ -1248,7 +1248,7 @@
     {
       "name": "Beef Burger",
       "price": 450,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Beef%20Burger.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burgers & Chips",
@@ -1257,7 +1257,7 @@
     {
       "name": "Double Beef Burger",
       "price": 650,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Double%20Beef%20Burger.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burgers & Chips",
@@ -1266,7 +1266,7 @@
     {
       "name": "Chips",
       "price": 250,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Chips.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burgers & Chips",
@@ -1284,7 +1284,7 @@
     {
       "name": "Mixed Fruit Salad",
       "price": 450,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/Mixed%20Fruit%20Salad.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Salads",
@@ -1293,7 +1293,7 @@
     {
       "name": "Special Salad",
       "price": 600,
-      "image": "/images/lunch.svg",
+      "image": "/lunch/Special%20Salad.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Salads",
@@ -1320,7 +1320,7 @@
     {
       "name": "Fruit Punch",
       "price": 300,
-      "image": "/images/juice.svg",
+      "image": "/lunch/Fruit%20Punch.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Salads",
@@ -1329,7 +1329,7 @@
     {
       "name": "Beef Club Sandwich",
       "price": 500,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Beef%20Club%20Sandwich.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Club Sandwiches",
@@ -1338,7 +1338,7 @@
     {
       "name": "Tuna Club Sandwich",
       "price": 500,
-      "image": "/images/burger.svg",
+      "image": "/lunch/tuna%20Club%20Sandwich.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Club Sandwiches",
@@ -1356,7 +1356,7 @@
     {
       "name": "Chicken Club Sandwich",
       "price": 600,
-      "image": "/images/burger.svg",
+      "image": "/lunch/chicken%20ckub%20sandwich.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Club Sandwiches",
@@ -1374,7 +1374,7 @@
     {
       "name": "Chicken Burrito",
       "price": 650,
-      "image": "/images/burger.svg",
+      "image": "/lunch/Chicken%20Burrito.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burritos",
@@ -1383,7 +1383,7 @@
     {
       "name": "Beef Burrito",
       "price": 650,
-      "image": "/images/burger.svg",
+      "image": "/lunch/beef%20Burrito.webp",
       "category": "bites",
       "category_label": "Bites",
       "group_label": "Burritos",
@@ -1392,7 +1392,7 @@
     {
       "name": "Traditional Coffee",
       "price": 60,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Traditional%20Coffee.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1401,7 +1401,7 @@
     {
       "name": "Steam Coffee",
       "price": 70,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Steam%20Coffee.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1410,7 +1410,7 @@
     {
       "name": "Espresso",
       "price": 90,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Espresso.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1419,7 +1419,7 @@
     {
       "name": "Macchiato",
       "price": 120,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Macchiato.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1428,7 +1428,7 @@
     {
       "name": "Americano",
       "price": 130,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Americano.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1437,7 +1437,7 @@
     {
       "name": "Milk",
       "price": 120,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Milk.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1446,7 +1446,7 @@
     {
       "name": "Hot Chocolate",
       "price": 220,
-      "image": "/images/coffee.svg",
+      "image": "/drink/hot%20chocolate.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1455,7 +1455,7 @@
     {
       "name": "Hot Caramel",
       "price": 220,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Hot%20Caramel.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1464,7 +1464,7 @@
     {
       "name": "Cappuccino",
       "price": 240,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Cappuccino.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1473,7 +1473,7 @@
     {
       "name": "Tea",
       "price": 50,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1482,7 +1482,7 @@
     {
       "name": "Tosign Tea",
       "price": 70,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Tosign%20Tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1491,7 +1491,7 @@
     {
       "name": "Ginger Tea",
       "price": 70,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Ginger%20Tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1500,7 +1500,7 @@
     {
       "name": "Lemon Tea",
       "price": 70,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Lemon%20Tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1527,7 +1527,7 @@
     {
       "name": "Moringa",
       "price": 90,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Moringa%20tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1536,7 +1536,7 @@
     {
       "name": "Pineapple Tea",
       "price": 120,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Pineapple%20Tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",
@@ -1563,7 +1563,7 @@
     {
       "name": "Peanut Tea",
       "price": 140,
-      "image": "/images/coffee.svg",
+      "image": "/drink/Peanut%20Tea.webp",
       "category": "drinks",
       "category_label": "Drinks",
       "group_label": "Hot Drinks",

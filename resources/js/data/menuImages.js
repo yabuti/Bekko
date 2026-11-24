@@ -1,5 +1,6 @@
-// Starter photos for the menu rows. Replace any file in public/images/
-// with a real photo of the item and it will appear here automatically.
+// Real photos supplied for menu items live in public/ and are mapped by exact
+// item name in menuPhotos.json. Anything without a photo falls back to an SVG.
+import menuPhotos from './menuPhotos.json'
 
 const photo = (name) => `/images/${name}.svg`
 
@@ -7,13 +8,7 @@ export function itemImage(itemName, categoryId, groupLabel) {
   const name = itemName.toLowerCase()
   const group = (groupLabel || '').toLowerCase()
 
-  if (name === 'egg sandwich') return '/breakfast/egg%20sandwitch.webp'
-  if (name === 'egg sauce') return '/breakfast/egg%20sauce.webp'
-  if (name === 'normal chechebsa') return '/breakfast/normal%20chechebsa.webp'
-  if (name === 'special chechebsa') return '/breakfast/special%20chechebsa.webp'
-  if (name === 'fasting chechebsa') return '/breakfast/fasting%20chechebsa.webp'
-  if (name === 'normal omelet') return '/breakfast/normal%20omlet.webp'
-  if (name === 'special omelet') return '/breakfast/special%20omelet.webp'
+  if (menuPhotos[itemName]) return menuPhotos[itemName]
 
   if (categoryId === 'breakfast') return photo('breakfast')
   if (categoryId === 'lunch') return photo('lunch')

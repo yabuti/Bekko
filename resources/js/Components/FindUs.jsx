@@ -1,16 +1,19 @@
 import { ArrowUpRight, Camera, Clock, MapPin, Phone, QrCode } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
-import { directionsUrl, site } from '../data/site'
+import { useI18n, useSite } from '../i18n/index.jsx'
 
 export default function FindUs({ menuUrl }) {
+  const { t } = useI18n()
+  const site = useSite()
+
   return (
     <section className="visit" id="visit">
       <div className="container">
         <div className="section-head visit-head">
           <div>
-            <span className="section-eyebrow">Find us</span>
-            <h2>Come say hello</h2>
-            <p className="section-subtitle">Pull up a chair — the coffee’s on.</p>
+            <span className="section-eyebrow">{t('home.visit.eyebrow')}</span>
+            <h2>{t('home.visit.title')}</h2>
+            <p className="section-subtitle">{t('home.visit.subtitle')}</p>
           </div>
         </div>
 
@@ -19,7 +22,7 @@ export default function FindUs({ menuUrl }) {
             <div className="info-card">
               <span className="info-icon"><Clock size={21} /></span>
               <div>
-                <h3>Opening hours</h3>
+                <h3>{t('home.visit.openingHours')}</h3>
                 <ul className="hours-list">
                   {site.hours.map(({ day, time }) => (
                     <li key={day}><span>{day}</span><strong>{time}</strong></li>
@@ -31,12 +34,12 @@ export default function FindUs({ menuUrl }) {
             <div className="info-card">
               <span className="info-icon"><MapPin size={21} /></span>
               <div>
-                <h3>Where to find us</h3>
+                <h3>{t('home.visit.whereToFindUs')}</h3>
                 <p className="address">
                   {site.address.map((line) => <span key={line}>{line}</span>)}
                 </p>
-                <a className="text-link" href={directionsUrl} target="_blank" rel="noreferrer">
-                  Get directions <ArrowUpRight size={15} />
+                <a className="text-link" href={site.directionsUrl} target="_blank" rel="noreferrer">
+                  {t('home.visit.getDirections')} <ArrowUpRight size={15} />
                 </a>
               </div>
             </div>
@@ -44,7 +47,7 @@ export default function FindUs({ menuUrl }) {
             <div className="info-card">
               <span className="info-icon"><Phone size={21} /></span>
               <div>
-                <h3>Get in touch</h3>
+                <h3>{t('home.visit.getInTouch')}</h3>
                 <p className="address">
                   <a href={`tel:${site.phone.replace(/\s/g, '')}`}>{site.phone}</a>
                   <a href={`mailto:${site.email}`}>{site.email}</a>
@@ -64,7 +67,7 @@ export default function FindUs({ menuUrl }) {
               <span className="map-pin"><MapPin size={26} fill="currentColor" /></span>
               <div className="map-label">{site.name}</div>
               {/* TEMPORARY: replace with a Google Maps embed once the real address is set. */}
-              <span className="map-note">Map preview — add your real address</span>
+              <span className="map-note">{t('common.site.mapNote')}</span>
             </div>
 
             <div className="qr-card">
@@ -72,9 +75,9 @@ export default function FindUs({ menuUrl }) {
                 <QRCodeSVG value={menuUrl} size={88} fgColor="#10361d" bgColor="#ffffff" level="M" />
               </div>
               <div>
-                <span className="qr-label"><QrCode size={15} /> Scan at your table</span>
-                <h3>The menu, on your phone</h3>
-                <p>Point your camera here to see the full menu.</p>
+                <span className="qr-label"><QrCode size={15} /> {t('common.site.scanAtTable')}</span>
+                <h3>{t('home.visit.menuOnPhone')}</h3>
+                <p>{t('home.visit.pointCamera')}</p>
               </div>
             </div>
           </div>

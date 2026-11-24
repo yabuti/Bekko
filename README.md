@@ -76,7 +76,9 @@ Change these passwords before using the app in a real cafe.
 
 - `resources/js/data/menu.json` — the 142 menu items and prices (shared by React and the seeder)
 - `config/site.php` — cafe name, hours, address, phone, email, Instagram and currency
-- `public/images/*.svg` — menu thumbnail placeholders; replace them with real photos using the same filenames
+- `public/{breakfast,lunch,drink}/` — real menu photos, mapped by name in `resources/js/data/menuPhotos.json`
+- `resources/js/i18n/{en,am,or}/` — one folder per language, with one file per page (English, Amharic, Afaan Oromoo)
+- `public/images/*.svg` — fallback thumbnails used when a menu item has no photo
 
 After changing menu prices or items, re-run:
 

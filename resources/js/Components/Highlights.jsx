@@ -1,13 +1,16 @@
 import { Beef, Coffee, GlassWater, Heart } from 'lucide-react'
-
-const highlights = [
-  { icon: GlassWater, text: 'Juice pressed daily' },
-  { icon: Beef, text: 'Burgers grilled to order' },
-  { icon: Coffee, text: 'Espresso, hot or iced' },
-  { icon: Heart, text: 'Made with love' },
-]
+import { useI18n } from '../i18n/index.jsx'
 
 export default function Highlights() {
+  const { t } = useI18n()
+
+  const highlights = [
+    { icon: GlassWater, text: t('home.highlights.0.text') },
+    { icon: Beef, text: t('home.highlights.1.text') },
+    { icon: Coffee, text: t('home.highlights.2.text') },
+    { icon: Heart, text: t('home.highlights.3.text') },
+  ]
+
   return (
     <div className="highlights">
       <div className="container highlights-inner">

@@ -1,15 +1,21 @@
 import { useEffect } from 'react'
 import { router } from '@inertiajs/react'
 import { Check, ChefHat, ClipboardList, Coffee, RefreshCw } from 'lucide-react'
+import LanguageSwitcher from '../Components/LanguageSwitcher'
+import { useI18n, useSite } from '../i18n/index.jsx'
 
 const steps = [
-  { key: 'new', label: 'Order received', hint: 'The kitchen has your order', icon: ClipboardList },
-  { key: 'preparing', label: 'Being prepared', hint: 'We are making it fresh', icon: ChefHat },
-  { key: 'ready', label: 'Ready to serve', hint: 'Your waiter is on the way', icon: Coffee },
-  { key: 'served', label: 'Enjoy your order', hint: 'Thank you for visiting', icon: Check },
+  { key: 'new', icon: ClipboardList },
+  { key: 'preparing', icon: ChefHat },
+  { key: 'ready', icon: Coffee },
+  { key: 'served', icon: Check },
 ]
 
-export default function OrderStatus({ site, order }) {
+export default function OrderStatus({ order }) {
+  const { t } = useI18n()
+  const site = useSite()
+  const currency = site.currency || 'ETB'
+
   useEffect(() => {
     const timer = window.setInterval(() => {
       router.reload({ only: ['order'], preserveState: true })
@@ -18,24 +24,22 @@ export default function OrderStatus({ site, order }) {
     return () => window.clearInterval(timer)
   }, [])
 
-  const currency = site?.currency || 'ETB'
   const current = steps.findIndex((step) => step.key === order.status)
 
   return (
     <div className="status-page">
       <header className="order-topbar">
-        <a className="order-back" href="/">Home</a>
+        <a className="order-back" href="/">{t('orderStatus.home')}</a>
         <div className="order-table-pill">{order.table.name}</div>
+        <LanguageSwitcher />
       </header>
 
       <div className="container status-card">
         <div className="status-head">
-          <span className="section-eyebrow">Order #{order.id}</span>
-          <h1>Thanks — we’ve got your order</h1>
-          <p>
-            Sit tight at {order.table.name}. This page updates automatically every 5 seconds.
-          </p>
-          <span className="live-badge"><RefreshCw size={13} /> Live updates</span>
+          <span className="section-eyebrow">{t('orderStatus.eyebrow', { id: order.id })}</span>
+          <h1>{t('orderStatus.heading')}</h1>
+          <p>{t('orderStatus.intro', { table: order.table.name })}</p>
+          <span className="live-badge"><RefreshCw size={13} /> {t('orderStatus.live')}</span>
         </div>
 
         <div className="status-track">
@@ -46,8 +50,8 @@ export default function OrderStatus({ site, order }) {
               <div className={`status-step ${state}`} key={step.key}>
                 <span className="status-step-icon"><Icon size={19} /></span>
                 <div>
-                  <strong>{step.label}</strong>
-                  <span>{step.hint}</span>
+                  <strong>{t(`orderStatus.steps.${index}.label`)}</strong>
+                  <span>{t(`orderStatus.steps.${index}.hint`)}</span>
                 </div>
               </div>
             )
@@ -55,16 +59,16 @@ export default function OrderStatus({ site, order }) {
         </div>
 
         <div className="status-receipt">
-          <h2>Your order</h2>
+          <h2>{t('orderStatus.yourOrder')}</h2>
           {order.items.map((item) => (
             <div className="receipt-line" key={item.id}>
               <span>{item.quantity} × {item.name}</span>
               <strong>{currency} {item.price * item.quantity}</strong>
             </div>
           ))}
-          {order.notes && <p className="receipt-note">Note: {order.notes}</p>}
+          {order.notes && <p className="receipt-note">{t('orderStatus.note', { note: order.notes })}</p>}
           <div className="receipt-total">
-            <span>Total</span>
+            <span>{t('orderStatus.total')}</span>
             <strong>{currency} {order.total}</strong>
           </div>
         </div>

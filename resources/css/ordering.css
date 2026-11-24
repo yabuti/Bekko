@@ -1,3 +1,31 @@
+/* ---------- language switcher ---------- */
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.language-switcher select {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--green-800);
+  cursor: pointer;
+}
+
+.language-switcher select:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+}
+
 /* ---------- customer ordering ---------- */
 .order-page,
 .status-page {
@@ -594,11 +622,18 @@
 
 /* ---------- staff login ---------- */
 .login-page {
+  position: relative;
   min-height: 100vh;
   background: linear-gradient(150deg, #f3faf5, #ffffff 60%);
   display: grid;
   place-items: center;
   padding: 32px 16px;
+}
+
+.login-page > .language-switcher {
+  position: absolute;
+  top: 22px;
+  right: 26px;
 }
 
 .login-back {

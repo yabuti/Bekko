@@ -2,8 +2,13 @@ import { useEffect } from 'react'
 import { router } from '@inertiajs/react'
 import OrderCard from '../../Components/OrderCard'
 import Staff from '../../Layouts/Staff'
+import { useI18n, useSite } from '../../i18n/index.jsx'
 
-export default function Waiter({ site, orders }) {
+export default function Waiter({ orders }) {
+  const { t } = useI18n()
+  const site = useSite()
+  const currency = site.currency || 'ETB'
+
   useEffect(() => {
     const timer = window.setInterval(() => {
       router.reload({ only: ['orders'], preserveState: true })
@@ -17,34 +22,34 @@ export default function Waiter({ site, orders }) {
 
   return (
     <Staff
-      title="Waiter dashboard"
-      subtitle="Every order from every table, in one place."
+      title={t('staffWaiter.title')}
+      subtitle={t('staffWaiter.subtitle')}
     >
       <div className="staff-columns">
         <section>
-          <h2 className="staff-section-title">Active orders <span>{active.length}</span></h2>
+          <h2 className="staff-section-title">{t('staffWaiter.activeOrders')} <span>{active.length}</span></h2>
           <div className="staff-order-grid">
             {active.map((order) => (
               <OrderCard
                 key={order.id}
                 order={order}
-                currency={site?.currency || 'ETB'}
+                currency={currency}
                 actions={order.status === 'ready'
-                  ? [{ label: 'Mark as served', status: 'served' }]
+                  ? [{ label: t('staffWaiter.markServed'), status: 'served' }]
                   : []}
               />
             ))}
-            {!active.length && <p className="staff-empty">No active orders yet.</p>}
+            {!active.length && <p className="staff-empty">{t('staffWaiter.noActive')}</p>}
           </div>
         </section>
 
         <section>
-          <h2 className="staff-section-title">Recently served</h2>
+          <h2 className="staff-section-title">{t('staffWaiter.recentlyServed')}</h2>
           <div className="staff-order-grid">
             {served.map((order) => (
-              <OrderCard key={order.id} order={order} currency={site?.currency || 'ETB'} />
+              <OrderCard key={order.id} order={order} currency={currency} />
             ))}
-            {!served.length && <p className="staff-empty">Nothing served yet.</p>}
+            {!served.length && <p className="staff-empty">{t('staffWaiter.nothingServed')}</p>}
           </div>
         </section>
       </div>

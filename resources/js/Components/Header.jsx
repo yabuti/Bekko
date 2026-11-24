@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react'
 import { ArrowUpRight, Menu as MenuIcon, X } from 'lucide-react'
 import Logo from './Logo'
-
-const links = [
-  { label: 'Home', href: '/#home' },
-  { label: 'Menu', href: '/menu' },
-  { label: 'Our story', href: '/#story' },
-  { label: 'Find us', href: '/#visit' },
-]
+import LanguageSwitcher from './LanguageSwitcher'
+import { useI18n } from '../i18n/index.jsx'
 
 export default function Header() {
+  const { t } = useI18n()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const links = [
+    { label: t('common.nav.home'), href: '/#home' },
+    { label: t('common.nav.menu'), href: '/menu' },
+    { label: t('common.nav.story'), href: '/#story' },
+    { label: t('common.nav.visit'), href: '/#visit' },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -23,7 +26,7 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="container header-inner">
-        <a href="/#home" className="brand" aria-label="Back to top">
+        <a href="/#home" className="brand" aria-label={t('common.nav.backToTop')}>
           <Logo className="brand-logo" />
         </a>
 
@@ -38,18 +41,20 @@ export default function Header() {
             href="/menu"
             onClick={() => setOpen(false)}
           >
-            See the menu <ArrowUpRight size={16} />
+            {t('common.nav.seeMenu')} <ArrowUpRight size={16} />
           </a>
         </nav>
 
+        <LanguageSwitcher />
+
         <a className="button button-primary header-cta" href="/menu">
-          See the menu <ArrowUpRight size={17} />
+          {t('common.nav.seeMenu')} <ArrowUpRight size={17} />
         </a>
 
         <button
           type="button"
           className="menu-toggle"
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? t('common.nav.closeMenu') : t('common.nav.openMenu')}
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >

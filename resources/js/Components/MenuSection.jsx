@@ -3,7 +3,7 @@ import { Beef, Coffee, GlassWater, Printer, Utensils } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import { menu } from '../data/menu'
 import { itemImage } from '../data/menuImages'
-import { site } from '../data/site'
+import { useI18n, useSite } from '../i18n/index.jsx'
 import Logo from './Logo'
 
 const categoryIcons = {
@@ -14,11 +14,20 @@ const categoryIcons = {
   fresh: GlassWater,
 }
 
-const filters = menu.map(({ id, label }) => ({ id, label }))
+const filters = menu.map(({ id }) => ({ id }))
 
 export default function MenuSection({ menuUrl }) {
+  const { t } = useI18n()
+  const site = useSite()
   const [active, setActive] = useState('breakfast')
   const visible = active === 'all' ? menu : menu.filter((category) => category.id === active)
+
+  const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
+    ? fallback
+    : t(`menu.categories.${id}.label`)
+  const categoryBlurb = (id, fallback) => t(`menu.categories.${id}.blurb`) === `menu.categories.${id}.blurb`
+    ? fallback
+    : t(`menu.categories.${id}.blurb`)
 
   const handlePrint = () => {
     // Print the whole menu, then return to the category the user was viewing.
@@ -44,42 +53,43 @@ export default function MenuSection({ menuUrl }) {
         </div>
         <div className="print-qr">
           <QRCodeSVG value={menuUrl} size={78} fgColor="#10361d" bgColor="#ffffff" level="M" />
-          <span>Scan for the menu</span>
+          <span>{t('common.site.scanForMenu')}</span>
         </div>
       </div>
 
       <div className="container">
         <div className="menu-page-nav">
-          <a href="/">← Back to home</a>
-          <span>Menu</span>
+          <a href="/">← {t('common.site.backToHome')}</a>
+          <span>{t('common.nav.menu')}</span>
         </div>
 
         <div className="section-head menu-head">
           <div>
-            <span className="section-eyebrow">The menu</span>
-            <h2>Something for every craving</h2>
-            <p className="section-subtitle">
-              From breakfast favourites to fresh juice and ice-cold mojitos — there’s something for every craving.
-            </p>
+            <span className="section-eyebrow">{t('menu.eyebrow')}</span>
+            <h2>{t('menu.heading')}</h2>
+            <p className="section-subtitle">{t('menu.subtitle')}</p>
           </div>
           <button type="button" className="button button-outline print-button" onClick={handlePrint}>
-            <Printer size={17} /> Print menu
+            <Printer size={17} /> {t('menu.print')}
           </button>
         </div>
 
-        <div className="menu-toolbar" role="tablist" aria-label="Menu categories">
-          {filters.map((filter) => (
-            <button
-              type="button"
-              key={filter.id}
-              role="tab"
-              aria-selected={active === filter.id}
-              className={`filter-pill${active === filter.id ? ' is-active' : ''}`}
-              onClick={() => setActive(filter.id)}
-            >
-              {filter.label}
-            </button>
-          ))}
+        <div className="menu-toolbar" role="tablist" aria-label={t('menu.categoriesLabel')}>
+          {filters.map((filter) => {
+            const category = menu.find((item) => item.id === filter.id)
+            return (
+              <button
+                type="button"
+                key={filter.id}
+                role="tab"
+                aria-selected={active === filter.id}
+                className={`filter-pill${active === filter.id ? ' is-active' : ''}`}
+                onClick={() => setActive(filter.id)}
+              >
+                {categoryLabel(filter.id, category?.label)}
+              </button>
+            )
+          })}
         </div>
 
         <div className="menu-stream">
@@ -90,12 +100,12 @@ export default function MenuSection({ menuUrl }) {
               <div className="menu-block" key={`${category.id}-${group.label || 'main'}`}>
                 {groupIndex === 0 && (
                   <>
-                    <h3 className="print-category">{category.label}</h3>
+                    <h3 className="print-category">{categoryLabel(category.id, category.label)}</h3>
                     <div className="category-heading screen-only">
                       <span className="category-icon"><Icon size={20} /></span>
                       <div>
-                        <h3>{category.label}</h3>
-                        <p>{category.blurb}</p>
+                        <h3>{categoryLabel(category.id, category.label)}</h3>
+                        <p>{categoryBlurb(category.id, category.blurb)}</p>
                       </div>
                     </div>
                   </>

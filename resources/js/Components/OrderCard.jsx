@@ -1,14 +1,9 @@
 import { router } from '@inertiajs/react'
 import { Clock } from 'lucide-react'
-
-const statusLabel = {
-  new: 'New order',
-  preparing: 'In the kitchen',
-  ready: 'Ready to serve',
-  served: 'Served',
-}
+import { useI18n } from '../i18n/index.jsx'
 
 export default function OrderCard({ order, currency, actions = [] }) {
+  const { t } = useI18n()
   const time = new Date(order.created_at).toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
@@ -19,9 +14,9 @@ export default function OrderCard({ order, currency, actions = [] }) {
       <div className="staff-order-head">
         <div>
           <span className="staff-order-table">{order.cafe_table?.name}</span>
-          <span className="staff-order-number">Order #{order.id}</span>
+          <span className="staff-order-number">{t('common.orderCard.order', { id: order.id })}</span>
         </div>
-        <span className={`order-status status-${order.status}`}>{statusLabel[order.status]}</span>
+        <span className={`order-status status-${order.status}`}>{t(`common.status.${order.status}`)}</span>
       </div>
 
       <ul className="staff-order-items">
@@ -34,7 +29,7 @@ export default function OrderCard({ order, currency, actions = [] }) {
         ))}
       </ul>
 
-      {order.notes && <p className="staff-order-note">Note: {order.notes}</p>}
+      {order.notes && <p className="staff-order-note">{t('common.orderCard.note', { note: order.notes })}</p>}
 
       <div className="staff-order-foot">
         <span className="order-time"><Clock size={14} /> {time}</span>

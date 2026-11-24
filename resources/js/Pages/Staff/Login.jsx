@@ -1,7 +1,10 @@
 import { useForm } from '@inertiajs/react'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
+import LanguageSwitcher from '../../Components/LanguageSwitcher'
+import { useI18n } from '../../i18n/index.jsx'
 
 export default function Login() {
+  const { t } = useI18n()
   const form = useForm({ email: '', password: '' })
 
   const submit = (event) => {
@@ -11,15 +14,16 @@ export default function Login() {
 
   return (
     <div className="login-page">
-      <a className="login-back" href="/">← Back to website</a>
+      <a className="login-back" href="/">← {t('staffLogin.back')}</a>
+      <LanguageSwitcher />
       <form className="login-card" onSubmit={submit}>
         <span className="login-mark"><ShieldCheck size={24} /></span>
-        <span className="section-eyebrow">Staff only</span>
-        <h1>Sign in to your dashboard</h1>
-        <p>Use your staff account to see orders from every table.</p>
+        <span className="section-eyebrow">{t('staffLogin.eyebrow')}</span>
+        <h1>{t('staffLogin.heading')}</h1>
+        <p>{t('staffLogin.intro')}</p>
 
         <label>
-          Email address
+          {t('staffLogin.email')}
           <input
             type="email"
             value={form.data.email}
@@ -31,7 +35,7 @@ export default function Login() {
         </label>
 
         <label>
-          Password
+          {t('staffLogin.password')}
           <input
             type="password"
             value={form.data.password}
@@ -43,11 +47,11 @@ export default function Login() {
         </label>
 
         <button className="button button-primary" type="submit" disabled={form.processing}>
-          {form.processing ? 'Signing in…' : 'Sign in'} <ArrowRight size={16} />
+          {form.processing ? t('staffLogin.signingIn') : t('staffLogin.signIn')} <ArrowRight size={16} />
         </button>
 
         <div className="login-hint">
-          <strong>Demo accounts</strong>
+          <strong>{t('staffLogin.demoAccounts')}</strong>
           <span>waiter@bekkocoffee.test · password</span>
           <span>kitchen@bekkocoffee.test · password</span>
           <span>admin@bekkocoffee.test · password</span>

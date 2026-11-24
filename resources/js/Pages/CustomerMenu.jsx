@@ -1,14 +1,25 @@
 import { useMemo, useState } from 'react'
 import { router, usePage } from '@inertiajs/react'
 import { ArrowLeft, Minus, Plus, ShoppingBag } from 'lucide-react'
+import LanguageSwitcher from '../Components/LanguageSwitcher'
+import { useI18n, useSite } from '../i18n/index.jsx'
 
-export default function CustomerMenu({ site, table, categories, items }) {
-  const currency = site?.currency || 'ETB'
+export default function CustomerMenu({ table, categories, items }) {
+  const { t } = useI18n()
+  const site = useSite()
+  const currency = site.currency || 'ETB'
   const errors = usePage().props.errors
   const [active, setActive] = useState(categories[0]?.id || '')
   const [cart, setCart] = useState({})
   const [notes, setNotes] = useState('')
   const [placing, setPlacing] = useState(false)
+
+  const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
+    ? fallback
+    : t(`menu.categories.${id}.label`)
+  const categoryBlurb = (id, fallback) => t(`menu.categories.${id}.blurb`) === `menu.categories.${id}.blurb`
+    ? fallback
+    : t(`menu.categories.${id}.blurb`)
 
   const itemById = useMemo(
     () => Object.fromEntries(items.map((item) => [item.id, item])),
@@ -68,19 +79,20 @@ export default function CustomerMenu({ site, table, categories, items }) {
     <div className="order-page">
       <header className="order-topbar">
         <a className="order-back" href="/">
-          <ArrowLeft size={17} /> Home
+          <ArrowLeft size={17} /> {t('customerMenu.home')}
         </a>
         <div className="order-table-pill">{table.name} · {table.code}</div>
+        <LanguageSwitcher />
       </header>
 
       <section className="order-hero container">
-        <span className="section-eyebrow">Order from your phone</span>
-        <h1>{site?.name || 'Bekko Coffee'}</h1>
-        <p>Choose what you feel like. We’ll bring it straight to {table.name}.</p>
+        <span className="section-eyebrow">{t('customerMenu.eyebrow')}</span>
+        <h1>{site.name}</h1>
+        <p>{t('customerMenu.intro', { table: table.name })}</p>
       </section>
 
       <div className="container">
-        <div className="menu-toolbar" role="tablist" aria-label="Menu categories">
+        <div className="menu-toolbar" role="tablist" aria-label={t('customerMenu.categoriesLabel')}>
           {categories.map((category) => (
             <button
               type="button"
@@ -90,7 +102,7 @@ export default function CustomerMenu({ site, table, categories, items }) {
               className={`filter-pill${active === category.id ? ' is-active' : ''}`}
               onClick={() => setActive(category.id)}
             >
-              {category.label}
+              {categoryLabel(category.id, category.label)}
             </button>
           ))}
         </div>
@@ -101,8 +113,8 @@ export default function CustomerMenu({ site, table, categories, items }) {
               <div className="menu-block" key={group.label || 'main'}>
                 <div className="category-heading screen-only">
                   <div>
-                    <h3>{category.label}</h3>
-                    <p>{category.blurb}</p>
+                    <h3>{categoryLabel(category.id, category.label)}</h3>
+                    <p>{categoryBlurb(category.id, category.blurb)}</p>
                   </div>
                 </div>
                 {group.label && <h4 className="group-heading">{group.label}</h4>}
@@ -119,17 +131,17 @@ export default function CustomerMenu({ site, table, categories, items }) {
                       </div>
                       {cart[item.id] ? (
                         <div className="quantity-control">
-                          <button type="button" onClick={() => changeQuantity(item.id, -1)} aria-label={`Remove one ${item.name}`}>
+                          <button type="button" onClick={() => changeQuantity(item.id, -1)} aria-label={t('customerMenu.removeOne', { item: item.name })}>
                             <Minus size={15} />
                           </button>
                           <strong>{cart[item.id]}</strong>
-                          <button type="button" onClick={() => changeQuantity(item.id, 1)} aria-label={`Add one ${item.name}`}>
+                          <button type="button" onClick={() => changeQuantity(item.id, 1)} aria-label={t('customerMenu.addOne', { item: item.name })}>
                             <Plus size={15} />
                           </button>
                         </div>
                       ) : (
                         <button type="button" className="add-button" onClick={() => changeQuantity(item.id, 1)}>
-                          <Plus size={16} /> Add
+                          <Plus size={16} /> {t('customerMenu.add')}
                         </button>
                       )}
                     </article>
@@ -146,7 +158,13 @@ export default function CustomerMenu({ site, table, categories, items }) {
           <div className="cart-summary">
             <span className="cart-icon"><ShoppingBag size={20} /></span>
             <div>
-              <strong>{count ? `${count} item${count === 1 ? '' : 's'} in your order` : 'Your order is empty'}</strong>
+              <strong>
+                {count
+                  ? count === 1
+                    ? t('customerMenu.itemOne')
+                    : t('customerMenu.itemMany', { count })
+                  : t('customerMenu.cartEmpty')}
+              </strong>
               <span>{currency} {total}</span>
             </div>
           </div>
@@ -155,7 +173,7 @@ export default function CustomerMenu({ site, table, categories, items }) {
               type="text"
               value={notes}
               onChange={(event) => setNotes(event.target.value)}
-              placeholder="Note for the kitchen (optional)"
+              placeholder={t('customerMenu.notesPlaceholder')}
               maxLength={500}
             />
             <button
@@ -164,7 +182,7 @@ export default function CustomerMenu({ site, table, categories, items }) {
               disabled={!count || placing}
               onClick={placeOrder}
             >
-              {placing ? 'Sending…' : 'Place order'} <Plus size={16} />
+              {placing ? t('customerMenu.sending') : t('customerMenu.placeOrder')} <Plus size={16} />
             </button>
           </div>
         </div>
