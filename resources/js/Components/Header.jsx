@@ -3,6 +3,7 @@ import { ArrowUpRight, Menu as MenuIcon, X } from 'lucide-react'
 import Logo from './Logo'
 import LanguageSwitcher from './LanguageSwitcher'
 import ThemeToggle from './ThemeToggle'
+import { site } from '../data/site'
 import { useI18n } from '../i18n/index.jsx'
 
 export default function Header() {
@@ -29,6 +30,10 @@ export default function Header() {
       <div className="container header-inner">
         <a href="/#home" className="brand" aria-label={t('common.nav.backToTop')}>
           <Logo className="brand-logo" />
+          <span className="brand-wordmark">
+            <strong>{site.name}</strong>
+            <small>{t('common.site.badge')}</small>
+          </span>
         </a>
 
         <nav className={`header-nav${open ? ' is-open' : ''}`} aria-label={t('common.nav.mainNavigation')}>
@@ -37,6 +42,10 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <div className="header-controls header-controls--mobile">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
           <a
             className="nav-mobile-cta"
             href="/menu"
@@ -46,7 +55,7 @@ export default function Header() {
           </a>
         </nav>
 
-        <div className="header-controls">
+        <div className="header-controls header-controls--desktop">
           <LanguageSwitcher />
           <ThemeToggle />
         </div>
