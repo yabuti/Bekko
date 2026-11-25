@@ -1,10 +1,20 @@
 import { ArrowRight, Beef, Coffee, GlassWater, Leaf, MapPin, Sparkles } from 'lucide-react'
 import { useI18n, useSite } from '../i18n/index.jsx'
+import { useOpenStatus } from '../openHours'
 import Logo from './Logo'
 
 export default function Hero() {
   const { t } = useI18n()
   const site = useSite()
+  const { isOpen, schedule } = useOpenStatus(site.hours)
+
+  const badge = isOpen ? t('common.site.badgeOpen') : t('common.site.badgeClosed')
+  const stickerTop = isOpen ? t('home.hero.openNow') : t('home.hero.closedNow')
+  const stickerBottom = isOpen
+    ? schedule?.dayKey === 'sunday'
+      ? t('home.hero.sundayCloseHint')
+      : t('home.hero.openHint')
+    : t('home.hero.closedHint')
 
   const floatingCards = [
     { icon: GlassWater, label: t('home.hero.floating.juice'), className: 'float-juice' },
@@ -26,7 +36,7 @@ export default function Hero() {
       <div className="container hero-inner">
         <div className="hero-copy">
           <span className="eyebrow">
-            <span className="eyebrow-dot" /> {site.badge}
+            <span className="eyebrow-dot" /> {badge}
           </span>
 
           <h1>
@@ -66,7 +76,9 @@ export default function Hero() {
             </div>
           </div>
 
-          <span className="open-sticker">{t('home.hero.openToday')}<br />{t('home.hero.openToday2')}</span>
+          <span className={`open-sticker${isOpen ? '' : ' is-closed'}`}>
+            {stickerTop}<br />{stickerBottom}
+          </span>
 
           {floatingCards.map(({ icon: Icon, label, className }) => (
             <div className={`float-card ${className}`} key={label}>

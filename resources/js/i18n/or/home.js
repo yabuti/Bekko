@@ -24,8 +24,11 @@ export default {
       ],
       "welcome": "Baga dhuftan",
       "caption": "Sharbatii · Burgerii · Buna",
-      "openToday": "BANA",
-      "openToday2": "HAR'A"
+      "openNow": "BANA",
+      "openHint": "BAGA DHUFTAN",
+      "sundayCloseHint": "HANGA 1 PM",
+      "closedNow": "CUFAME",
+      "closedHint": "YEROO ILAALI"
     },
     "highlights": [
       {
@@ -126,8 +129,8 @@ export default {
           "answer": "Ni jira. Pizza kuduraa, salaata, shiroo, paastaa kuduraa fi sharbatii haara'aa menyuu keessatti ni jiru."
         },
         {
-          "question": "Sanbata fi dibayyana bana jirtuu?",
-          "answer": "Ni jiru — guyuu hojii fi sanbata/dibayyana hunda bana jiru. Yeroo banaa ammaa kotta Nuu argadhaa keessatti argama."
+          "question": "Sanbata fi Dilbata bana jirtuu?",
+          "answer": "Ni jiru — Wiixata hanga Sanbataatti fi Dilbata ganama bana jiru. Dilbata 1:00 PM booda cufama; yeroo banaa ammaa kotta Nuu argadhaa keessatti argama."
         },
         {
           "question": "Gaafannaa koon deebii hordofuu dandeenyaa?",

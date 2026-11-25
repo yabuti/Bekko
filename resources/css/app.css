@@ -477,6 +477,12 @@ img {
   box-shadow: 0 12px 26px rgba(16, 54, 29, 0.16);
 }
 
+.open-sticker.is-closed {
+  background: var(--green-100);
+  color: var(--muted);
+  box-shadow: 0 12px 26px rgba(16, 54, 29, 0.1);
+}
+
 .float-card {
   position: absolute;
   z-index: 3;

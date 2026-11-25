@@ -3,13 +3,17 @@ import { ArrowUpRight, Menu as MenuIcon, X } from 'lucide-react'
 import Logo from './Logo'
 import LanguageSwitcher from './LanguageSwitcher'
 import ThemeToggle from './ThemeToggle'
-import { site } from '../data/site'
-import { useI18n } from '../i18n/index.jsx'
+import { useI18n, useSite } from '../i18n/index.jsx'
+import { useOpenStatus } from '../openHours'
 
 export default function Header() {
   const { t } = useI18n()
+  const site = useSite()
+  const { isOpen } = useOpenStatus(site.hours)
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const badge = isOpen ? t('common.site.badgeOpen') : t('common.site.badgeClosed')
 
   const links = [
     { label: t('common.nav.home'), href: '/#home' },
@@ -32,7 +36,7 @@ export default function Header() {
           <Logo className="brand-logo" />
           <span className="brand-wordmark">
             <strong>{site.name}</strong>
-            <small>{t('common.site.badge')}</small>
+            <small>{badge}</small>
           </span>
         </a>
 

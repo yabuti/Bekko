@@ -24,8 +24,11 @@ export default {
       ],
       "welcome": "Welcome to",
       "caption": "Juice · Burgers · Coffee",
-      "openToday": "OPEN",
-      "openToday2": "TODAY"
+      "openNow": "OPEN",
+      "openHint": "COME IN",
+      "sundayCloseHint": "TILL 1 PM",
+      "closedNow": "CLOSED",
+      "closedHint": "SEE HOURS"
     },
     "highlights": [
       {
@@ -127,7 +130,7 @@ export default {
         },
         {
           "question": "Do you open on weekends?",
-          "answer": "Yes — we’re open on weekdays and weekends. The current hours are listed in the Find us section."
+          "answer": "Yes — Monday to Saturday, plus Sunday morning. On Sunday we close after 1:00 PM; the current hours are listed in the Find us section."
         },
         {
           "question": "Can I track my order after placing it?",

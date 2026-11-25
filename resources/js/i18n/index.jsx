@@ -89,11 +89,11 @@ export function useSite() {
     ...siteData,
     tagline: t('common.site.tagline'),
     description: t('common.site.description'),
-    badge: t('common.site.badge'),
-    hours: [
-      { day: t('common.site.weekday'), time: t('common.site.weekdayTime') },
-      { day: t('common.site.weekend'), time: t('common.site.weekendTime') },
-    ],
+    hours: siteData.hours.map((hours) => ({
+      ...hours,
+      day: t(`common.site.${hours.dayKey}`),
+      time: t(`common.site.${hours.timeKey}`),
+    })),
     directionsUrl,
   }), [t])
 }
