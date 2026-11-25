@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             CafeTableSeeder::class,
             StaffUserSeeder::class,
             MenuItemSeeder::class,
+            MenuItemDetailSeeder::class,
         ]);
     }
 }

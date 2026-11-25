@@ -1,6 +1,7 @@
 import { useForm } from '@inertiajs/react'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import LanguageSwitcher from '../../Components/LanguageSwitcher'
+import ThemeToggle from '../../Components/ThemeToggle'
 import { useI18n } from '../../i18n/index.jsx'
 
 export default function Login() {
@@ -15,7 +16,10 @@ export default function Login() {
   return (
     <div className="login-page">
       <a className="login-back" href="/">← {t('staffLogin.back')}</a>
-      <LanguageSwitcher />
+      <div className="header-controls login-controls">
+        <LanguageSwitcher />
+        <ThemeToggle />
+      </div>
       <form className="login-card" onSubmit={submit}>
         <span className="login-mark"><ShieldCheck size={24} /></span>
         <span className="section-eyebrow">{t('staffLogin.eyebrow')}</span>

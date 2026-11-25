@@ -1,0 +1,570 @@
+{
+  "Egg Sandwich": {
+    "description": "A freshly cooked egg in toasted bread, lightly seasoned.",
+    "ingredients": "Bread, Egg, Butter, Salt, Pepper"
+  },
+  "Egg Sauce": {
+    "description": "Eggs simmered in a mild, savoury sauce.",
+    "ingredients": "Eggs, Tomato, Onion, Oil, Spices, Salt"
+  },
+  "Normal Ful": {
+    "description": "Fava beans stewed with onion, tomato and gentle spices.",
+    "ingredients": "Fava beans, Onion, Tomato, Oil, Salt, Spices"
+  },
+  "Special Ful": {
+    "description": "A richer plate of stewed fava beans with extra toppings.",
+    "ingredients": "Fava beans, Onion, Tomato, Egg, Oil, Spices"
+  },
+  "Normal Fetira": {
+    "description": "A golden, flaky pan-fried flatbread.",
+    "ingredients": "Wheat flour, Butter, Water, Salt"
+  },
+  "Special Fetira": {
+    "description": "A larger flaky flatbread served with a topping.",
+    "ingredients": "Wheat flour, Butter, Egg, Water, Salt"
+  },
+  "Normal Chechebsa": {
+    "description": "Torn flatbread tossed with mild spiced butter.",
+    "ingredients": "Wheat flour, Spiced butter, Berbere, Salt"
+  },
+  "Special Chechebsa": {
+    "description": "Torn flatbread tossed in spiced butter with a side topping.",
+    "ingredients": "Wheat flour, Spiced butter, Berbere, Salt"
+  },
+  "Fasting Chechebsa": {
+    "description": "Torn flatbread tossed in a rich, dairy-free spiced sauce.",
+    "ingredients": "Wheat flour, Oil, Berbere, Salt"
+  },
+  "Normal Omelet": {
+    "description": "Soft scrambled eggs cooked with vegetables.",
+    "ingredients": "Eggs, Onion, Tomato, Oil, Salt"
+  },
+  "Special Omelet": {
+    "description": "A generous omelet with extra vegetables and seasoning.",
+    "ingredients": "Eggs, Onion, Tomato, Pepper, Oil, Spices"
+  },
+  "Bula with Butter": {
+    "description": "Creamy bula porridge enriched with butter.",
+    "ingredients": "Roasted grain flour, Butter, Water, Salt"
+  },
+  "Bula with Kitfo": {
+    "description": "Creamy bula porridge served with seasoned minced beef.",
+    "ingredients": "Roasted grain flour, Minced beef, Spiced butter, Salt"
+  },
+  "Fasting Bula": {
+    "description": "A dairy-free bula porridge, warm and smooth.",
+    "ingredients": "Roasted grain flour, Water, Oil, Salt"
+  },
+  "Kinche": {
+    "description": "A warm, nutty cracked wheat porridge.",
+    "ingredients": "Cracked wheat, Water, Butter, Salt"
+  },
+  "Kinche with Egg": {
+    "description": "Cracked wheat porridge topped with a cooked egg.",
+    "ingredients": "Cracked wheat, Egg, Water, Butter, Salt"
+  },
+  "Fasting Kinche": {
+    "description": "A dairy-free cracked wheat porridge.",
+    "ingredients": "Cracked wheat, Water, Oil, Salt"
+  },
+  "Firfir with Butter": {
+    "description": "Torn flatbread tossed with butter and spices.",
+    "ingredients": "Flatbread, Butter, Onion, Berbere, Salt"
+  },
+  "Tibs Firfir": {
+    "description": "Torn flatbread soaked in a spiced meat sauce.",
+    "ingredients": "Flatbread, Beef, Onion, Tomato, Spices, Oil"
+  },
+  "Kuanta Firfir": {
+    "description": "Torn flatbread with dried beef and warming spices.",
+    "ingredients": "Flatbread, Dried beef, Onion, Spices, Oil"
+  },
+  "Fasting Firfir": {
+    "description": "Torn flatbread in a rich, dairy-free vegetable sauce.",
+    "ingredients": "Flatbread, Onion, Tomato, Oil, Spices"
+  },
+  "Pasta with Sauce": {
+    "description": "Pasta served in a rich tomato sauce.",
+    "ingredients": "Pasta, Tomato, Onion, Garlic, Oil, Herbs"
+  },
+  "Pasta with Vegetable": {
+    "description": "Pasta tossed with fresh vegetables.",
+    "ingredients": "Pasta, Mixed vegetables, Onion, Oil, Herbs"
+  },
+  "Pasta with Meat": {
+    "description": "Pasta with a savoury minced meat sauce.",
+    "ingredients": "Pasta, Minced meat, Tomato, Onion, Spices"
+  },
+  "Chicken Rice": {
+    "description": "Rice cooked with tender chicken and mild spices.",
+    "ingredients": "Rice, Chicken, Onion, Carrot, Spices, Oil"
+  },
+  "Beef Rice": {
+    "description": "Rice cooked with tender beef and mild spices.",
+    "ingredients": "Rice, Beef, Onion, Carrot, Spices, Oil"
+  },
+  "Rice with Vegetable": {
+    "description": "Rice cooked with garden vegetables.",
+    "ingredients": "Rice, Mixed vegetables, Onion, Spices, Oil"
+  },
+  "Chicken Tibs": {
+    "description": "Sautéed chicken pieces with onion and peppers.",
+    "ingredients": "Chicken, Onion, Green pepper, Spiced butter, Spices"
+  },
+  "Chikina Tibs": {
+    "description": "Chicken tibs prepared with a mildly spiced sauce.",
+    "ingredients": "Chicken, Onion, Tomato, Spices, Oil"
+  },
+  "Shiro with Butter": {
+    "description": "Creamy shiro stew finished with spiced butter.",
+    "ingredients": "Chickpea flour, Spiced butter, Onion, Tomato, Spices"
+  },
+  "Shiro with Salad": {
+    "description": "Creamy shiro stew served with a fresh salad.",
+    "ingredients": "Chickpea flour, Onion, Tomato, Lettuce, Spices"
+  },
+  "Fasting Shiro": {
+    "description": "A dairy-free chickpea stew with onion and tomato.",
+    "ingredients": "Chickpea flour, Onion, Tomato, Oil, Spices"
+  },
+  "Bozena Shiro": {
+    "description": "A darker, richly spiced shiro stew.",
+    "ingredients": "Chickpea flour, Onion, Tomato, Berbere, Oil, Spices"
+  },
+  "Meser with Butter": {
+    "description": "Slow-cooked lentils finished with butter.",
+    "ingredients": "Lentils, Butter, Onion, Tomato, Spices"
+  },
+  "Normal Meser": {
+    "description": "Slow-cooked lentils with onion and gentle spices.",
+    "ingredients": "Lentils, Onion, Tomato, Oil, Spices"
+  },
+  "Half Half (Shiro/Meser)": {
+    "description": "Half shiro and half meser on one plate.",
+    "ingredients": "Chickpea flour, Lentils, Onion, Tomato, Spices, Oil"
+  },
+  "Fasting Half Half": {
+    "description": "A dairy-free plate of shiro and lentils.",
+    "ingredients": "Chickpea flour, Lentils, Onion, Tomato, Oil, Spices"
+  },
+  "Timatim Lebleb": {
+    "description": "A bright tomato and bread salad with a tangy dressing.",
+    "ingredients": "Tomato, Bread, Onion, Green chilli, Oil, Lemon"
+  },
+  "Special Pizza": {
+    "description": "A generously topped pizza baked until golden.",
+    "ingredients": "Pizza dough, Tomato sauce, Cheese, Mixed toppings, Herbs"
+  },
+  "Beef Pizza": {
+    "description": "A pizza topped with seasoned minced beef.",
+    "ingredients": "Pizza dough, Tomato sauce, Cheese, Minced beef, Herbs"
+  },
+  "Chicken Pizza": {
+    "description": "A pizza topped with tender chicken pieces.",
+    "ingredients": "Pizza dough, Tomato sauce, Cheese, Chicken, Herbs"
+  },
+  "Tuna Pizza": {
+    "description": "A pizza topped with flaked tuna.",
+    "ingredients": "Pizza dough, Tomato sauce, Cheese, Tuna, Herbs"
+  },
+  "Margherita": {
+    "description": "A classic pizza with tomato, mozzarella and basil.",
+    "ingredients": "Pizza dough, Tomato sauce, Mozzarella, Basil, Oil"
+  },
+  "Vegetable Pizza": {
+    "description": "A pizza loaded with fresh vegetables.",
+    "ingredients": "Pizza dough, Tomato sauce, Cheese, Mixed vegetables, Herbs"
+  },
+  "Special Burger": {
+    "description": "A fully loaded burger with all the trimmings.",
+    "ingredients": "Bun, Beef patty, Cheese, Lettuce, Tomato, Sauce"
+  },
+  "Cheese Burger": {
+    "description": "A juicy burger with a slice of melted cheese.",
+    "ingredients": "Bun, Beef patty, Cheese, Lettuce, Sauce"
+  },
+  "Double Cheese Burger": {
+    "description": "Two patties layered with plenty of cheese.",
+    "ingredients": "Bun, Beef patties, Cheese, Lettuce, Sauce"
+  },
+  "Beef Burger": {
+    "description": "A grilled beef patty in a soft bun.",
+    "ingredients": "Bun, Beef patty, Lettuce, Tomato, Sauce"
+  },
+  "Double Beef Burger": {
+    "description": "Two beef patties stacked in a soft bun.",
+    "ingredients": "Bun, Beef patties, Lettuce, Tomato, Sauce"
+  },
+  "Chips": {
+    "description": "Golden, crisp chips lightly salted.",
+    "ingredients": "Potatoes, Oil, Salt"
+  },
+  "Green Salad": {
+    "description": "A crisp salad of fresh green leaves.",
+    "ingredients": "Lettuce, Cucumber, Onion, Oil, Lemon"
+  },
+  "Mixed Fruit Salad": {
+    "description": "A colourful bowl of freshly cut fruit.",
+    "ingredients": "Mixed fruit, Yogurt, Honey"
+  },
+  "Special Salad": {
+    "description": "A generous salad with a variety of fresh ingredients.",
+    "ingredients": "Lettuce, Tomato, Cucumber, Egg, Oil, Lemon"
+  },
+  "Tuna Salad": {
+    "description": "A fresh salad topped with flaked tuna.",
+    "ingredients": "Lettuce, Tomato, Tuna, Onion, Oil, Lemon"
+  },
+  "Chicken Salad": {
+    "description": "A fresh salad topped with chicken pieces.",
+    "ingredients": "Lettuce, Tomato, Chicken, Cucumber, Oil, Lemon"
+  },
+  "Fruit Punch": {
+    "description": "A sweet, fruity punch served chilled.",
+    "ingredients": "Mixed fruit, Juice, Sugar, Ice"
+  },
+  "Beef Club Sandwich": {
+    "description": "A layered club sandwich with beef and salad.",
+    "ingredients": "Bread, Beef, Egg, Lettuce, Tomato, Mayonnaise"
+  },
+  "Tuna Club Sandwich": {
+    "description": "A layered club sandwich with tuna and salad.",
+    "ingredients": "Bread, Tuna, Egg, Lettuce, Tomato, Mayonnaise"
+  },
+  "Mixed Club Sandwich": {
+    "description": "A layered club sandwich with a mix of fillings.",
+    "ingredients": "Bread, Mixed fillings, Egg, Lettuce, Mayonnaise"
+  },
+  "Chicken Club Sandwich": {
+    "description": "A layered club sandwich with chicken and salad.",
+    "ingredients": "Bread, Chicken, Egg, Lettuce, Tomato, Mayonnaise"
+  },
+  "Special Burrito": {
+    "description": "A warm tortilla wrapped around a generous filling.",
+    "ingredients": "Tortilla, Rice, Beans, Meat, Cheese, Spices"
+  },
+  "Chicken Burrito": {
+    "description": "A warm tortilla filled with spiced chicken.",
+    "ingredients": "Tortilla, Chicken, Rice, Beans, Cheese, Spices"
+  },
+  "Beef Burrito": {
+    "description": "A warm tortilla filled with spiced beef.",
+    "ingredients": "Tortilla, Beef, Rice, Beans, Cheese, Spices"
+  },
+  "Traditional Coffee": {
+    "description": "Freshly brewed Ethiopian coffee, served black in a small cup.",
+    "ingredients": "Roasted coffee beans, Water"
+  },
+  "Steam Coffee": {
+    "description": "Steamed coffee with a soft, creamy texture.",
+    "ingredients": "Coffee, Milk, Water"
+  },
+  "Espresso": {
+    "description": "A rich, concentrated shot of coffee.",
+    "ingredients": "Finely ground coffee, Water"
+  },
+  "Macchiato": {
+    "description": "Espresso marked with a small spoonful of milk foam.",
+    "ingredients": "Espresso, Milk foam"
+  },
+  "Americano": {
+    "description": "Espresso lengthened with hot water for a smoother cup.",
+    "ingredients": "Espresso, Hot water"
+  },
+  "Milk": {
+    "description": "Fresh milk, served hot or cold.",
+    "ingredients": "Milk"
+  },
+  "Hot Chocolate": {
+    "description": "A warm, rich cocoa drink made with milk.",
+    "ingredients": "Cocoa, Milk, Sugar"
+  },
+  "Hot Caramel": {
+    "description": "A warm caramel drink with a smooth, sweet finish.",
+    "ingredients": "Milk, Caramel syrup, Sugar"
+  },
+  "Cappuccino": {
+    "description": "Espresso, steamed milk and a thick layer of milk foam.",
+    "ingredients": "Espresso, Steamed milk, Milk foam"
+  },
+  "Tea": {
+    "description": "A simple cup of black tea, brewed fresh.",
+    "ingredients": "Tea leaves, Water, Sugar"
+  },
+  "Tosign Tea": {
+    "description": "A warming spiced tea served hot.",
+    "ingredients": "Tea leaves, Spices, Water, Sugar"
+  },
+  "Ginger Tea": {
+    "description": "Black tea with fresh ginger and a little sweetness.",
+    "ingredients": "Tea leaves, Ginger, Water, Sugar"
+  },
+  "Lemon Tea": {
+    "description": "Black tea with a bright squeeze of lemon.",
+    "ingredients": "Tea leaves, Lemon, Water, Sugar"
+  },
+  "Ginger (Keshir)": {
+    "description": "A spicy ginger infusion, served hot.",
+    "ingredients": "Ginger, Water, Sugar"
+  },
+  "Mint Tea": {
+    "description": "A refreshing infusion of mint leaves.",
+    "ingredients": "Mint leaves, Water, Sugar"
+  },
+  "Moringa": {
+    "description": "A nourishing moringa leaf infusion.",
+    "ingredients": "Moringa leaves, Water, Sugar"
+  },
+  "Pineapple Tea": {
+    "description": "A fruity pineapple tea, served hot or cold.",
+    "ingredients": "Pineapple, Tea leaves, Water, Sugar"
+  },
+  "Orange Tea": {
+    "description": "A fragrant orange tea, served hot or cold.",
+    "ingredients": "Orange, Tea leaves, Water, Sugar"
+  },
+  "Mango Tea": {
+    "description": "A sweet mango tea, served hot or cold.",
+    "ingredients": "Mango, Tea leaves, Water, Sugar"
+  },
+  "Peanut Tea": {
+    "description": "A warm, nutty peanut tea.",
+    "ingredients": "Peanuts, Tea leaves, Water, Sugar"
+  },
+  "Tea Corenti": {
+    "description": "A spiced tea blend served hot and fragrant.",
+    "ingredients": "Tea leaves, Mixed spices, Water, Sugar"
+  },
+  "Peanut with Milk": {
+    "description": "A creamy peanut and milk drink, served warm.",
+    "ingredients": "Peanuts, Milk, Sugar"
+  },
+  "Ginger with Milk": {
+    "description": "Ginger brewed with milk for a warm, spicy drink.",
+    "ingredients": "Ginger, Milk, Sugar"
+  },
+  "Avocado": {
+    "description": "Freshly blended avocado juice.",
+    "ingredients": "Avocado, Water, Ice, Sugar"
+  },
+  "Papaya": {
+    "description": "Freshly blended papaya juice.",
+    "ingredients": "Papaya, Water, Ice, Sugar"
+  },
+  "Mango": {
+    "description": "Freshly blended mango juice.",
+    "ingredients": "Mango, Water, Ice, Sugar"
+  },
+  "Pineapple": {
+    "description": "Freshly blended pineapple juice.",
+    "ingredients": "Pineapple, Water, Ice, Sugar"
+  },
+  "Beso Juice": {
+    "description": "Freshly blended beso fruit juice.",
+    "ingredients": "Beso fruit, Water, Sugar"
+  },
+  "Watermelon": {
+    "description": "Freshly blended watermelon juice.",
+    "ingredients": "Watermelon, Water, Ice, Sugar"
+  },
+  "Mixed": {
+    "description": "A refreshing blend of seasonal fruits.",
+    "ingredients": "Mixed fruit, Water, Sugar"
+  },
+  "Beso with Milk": {
+    "description": "Beso juice blended with milk for a richer texture.",
+    "ingredients": "Beso fruit, Milk, Sugar"
+  },
+  "Telba": {
+    "description": "A smooth, nourishing flaxseed drink.",
+    "ingredients": "Flaxseed, Water, Sugar"
+  },
+  "Orange": {
+    "description": "Freshly squeezed orange juice.",
+    "ingredients": "Oranges, Water, Ice, Sugar"
+  },
+  "Iced Latte": {
+    "description": "Espresso and milk poured over ice.",
+    "ingredients": "Espresso, Milk, Ice"
+  },
+  "Iced Coffee": {
+    "description": "Chilled brewed coffee served over ice.",
+    "ingredients": "Coffee, Water, Ice"
+  },
+  "Iced Caramel": {
+    "description": "Iced coffee sweetened with caramel syrup.",
+    "ingredients": "Coffee, Milk, Caramel syrup, Ice"
+  },
+  "Iced Chocolate": {
+    "description": "A chilled cocoa and milk drink.",
+    "ingredients": "Cocoa, Milk, Ice, Sugar"
+  },
+  "Iced Vanilla Matcha": {
+    "description": "A chilled matcha latte with vanilla.",
+    "ingredients": "Matcha, Milk, Vanilla syrup, Ice"
+  },
+  "Iced Strawberry Matcha": {
+    "description": "A chilled matcha latte layered with strawberry.",
+    "ingredients": "Matcha, Strawberry, Milk, Ice"
+  },
+  "Ube Latte": {
+    "description": "A creamy ube latte with a hint of vanilla.",
+    "ingredients": "Ube, Milk, Espresso, Ice"
+  },
+  "Cooling Faster": {
+    "description": "A cooling blended juice for a hot day.",
+    "ingredients": "Mixed fruit, Water, Ice, Sugar"
+  },
+  "Strawberry Smoothie": {
+    "description": "A smooth blend of fruit and yoghurt.",
+    "ingredients": "Strawberry, Yogurt, Milk, Ice"
+  },
+  "Body Builder": {
+    "description": "A filling blended drink with fruit and yoghurt.",
+    "ingredients": "Mixed fruit, Yogurt, Milk, Sugar"
+  },
+  "Power": {
+    "description": "An energising blend of fruit and milk.",
+    "ingredients": "Mixed fruit, Milk, Honey, Ice"
+  },
+  "Mind Set": {
+    "description": "A smooth fruit blend to help you focus.",
+    "ingredients": "Mixed fruit, Yogurt, Honey, Ice"
+  },
+  "Special with Cream": {
+    "description": "A rich fruit juice finished with cream.",
+    "ingredients": "Mixed fruit, Cream, Ice, Sugar"
+  },
+  "Temir": {
+    "description": "A sweet drink made from ripe temir fruit.",
+    "ingredients": "Temir fruit, Water, Sugar"
+  },
+  "Special Bikko Juice": {
+    "description": "A specially blended bikko fruit juice.",
+    "ingredients": "Bikko fruit, Water, Sugar"
+  },
+  "Classical Mojito": {
+    "description": "A classic mojito with mint, lime and soda.",
+    "ingredients": "Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Strawberry Mojito": {
+    "description": "A cooling mojito with mint, lime and strawberry.",
+    "ingredients": "Strawberry, Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Cinnamon Mojito": {
+    "description": "A cooling mojito with mint, lime and a fruity twist.",
+    "ingredients": "Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Pineapple Mojito": {
+    "description": "A cooling mojito with mint, lime and pineapple.",
+    "ingredients": "Pineapple, Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Blue Mojito": {
+    "description": "A cooling mojito with mint, lime and a fruity twist.",
+    "ingredients": "Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Red Mojito": {
+    "description": "A cooling mojito with mint, lime and a fruity twist.",
+    "ingredients": "Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Mint Mojito": {
+    "description": "A cooling mojito with mint, lime and a fruity twist.",
+    "ingredients": "Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Lemon Mojito": {
+    "description": "A cooling mojito with mint, lime and a fruity twist.",
+    "ingredients": "Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Watermelon Mojito": {
+    "description": "A cooling mojito with mint, lime and watermelon.",
+    "ingredients": "Watermelon, Mint, Lime, Soda, Ice, Sugar"
+  },
+  "Espresso Mojito": {
+    "description": "A cool mojito with a shot of espresso.",
+    "ingredients": "Espresso, Mint, Lime, Soda, Ice"
+  },
+  "Special Mojito": {
+    "description": "Our house mojito with mint, lime and a fruity twist.",
+    "ingredients": "Mint, Lime, Mixed fruit, Soda, Ice, Sugar"
+  },
+  "Special Shake": {
+    "description": "A thick, creamy house shake.",
+    "ingredients": "Milk, Ice cream, Mixed fruit, Sugar"
+  },
+  "Strawberry Shake": {
+    "description": "A thick, creamy strawberry shake made with fresh ingredients.",
+    "ingredients": "Strawberry, Milk, Ice, Sugar"
+  },
+  "Avocado Shake": {
+    "description": "A thick, creamy avocado shake made with fresh ingredients.",
+    "ingredients": "Avocado, Milk, Ice, Sugar"
+  },
+  "Avocado Berry Shake": {
+    "description": "A thick, creamy avocado berry shake made with fresh ingredients.",
+    "ingredients": "Avocado, Milk, Ice, Sugar"
+  },
+  "Papaya Shake": {
+    "description": "A thick, creamy papaya shake made with fresh ingredients.",
+    "ingredients": "Papaya, Milk, Ice, Sugar"
+  },
+  "Mango Shake": {
+    "description": "A thick, creamy mango shake made with fresh ingredients.",
+    "ingredients": "Mango, Milk, Ice, Sugar"
+  },
+  "Mixed Shake": {
+    "description": "A thick, creamy mixed shake made with fresh ingredients.",
+    "ingredients": "Mixed, Milk, Ice, Sugar"
+  },
+  "Protein Shake": {
+    "description": "A creamy shake with added protein.",
+    "ingredients": "Milk, Protein powder, Banana, Ice"
+  },
+  "Banana Shake": {
+    "description": "A thick, creamy banana shake made with fresh ingredients.",
+    "ingredients": "Banana, Milk, Ice, Sugar"
+  },
+  "Smoothie Shake": {
+    "description": "A smooth blend of fruit and yoghurt.",
+    "ingredients": "Mixed fruit, Yogurt, Milk, Ice"
+  },
+  "Chocolate Milk Shake": {
+    "description": "A thick, creamy chocolate milk shake made with fresh ingredients.",
+    "ingredients": "Mixed fruit, Milk, Ice, Sugar"
+  },
+  "Strawberry Milk Shake": {
+    "description": "A thick, creamy strawberry milk shake made with fresh ingredients.",
+    "ingredients": "Strawberry, Milk, Ice, Sugar"
+  },
+  "Vanilla Milk Shake": {
+    "description": "A thick, creamy vanilla milk shake made with fresh ingredients.",
+    "ingredients": "Mixed fruit, Milk, Ice, Sugar"
+  },
+  "Water, 1/4 L": {
+    "description": "Clean drinking water, served chilled.",
+    "ingredients": "Water"
+  },
+  "Water, 1/2 L": {
+    "description": "Clean drinking water, served chilled.",
+    "ingredients": "Water"
+  },
+  "Soft Drink": {
+    "description": "A chilled carbonated soft drink.",
+    "ingredients": "Carbonated water, Sugar, Flavouring"
+  },
+  "Ambo Water": {
+    "description": "Natural mineral water, served chilled.",
+    "ingredients": "Mineral water"
+  },
+  "Yogurt": {
+    "description": "Smooth, fresh yoghurt served chilled.",
+    "ingredients": "Milk, Yogurt culture"
+  },
+  "Take Away Box": {
+    "description": "A sturdy box for taking your food away.",
+    "ingredients": "Paperboard"
+  },
+  "Cup": {
+    "description": "A cup for takeaway drinks.",
+    "ingredients": "Paper, Waterproof lining"
+  }
+}

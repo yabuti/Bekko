@@ -46,7 +46,7 @@ export default {
       "title": "A little place with a big heart",
       "lead": "We started with a simple idea: great juice, honest food and a proper cup of coffee, all under one roof.",
       "text": "Whether you’re grabbing a quick macchiato on the way to work, settling in with a burger and fries, or catching up over a fresh juice, there’s a seat here for you.",
-      "placeholder": "[Add a sentence or two about your uncle and how the cafe started.]",
+      "family": "The cafe grew from a family habit of sharing good coffee and fresh food with anyone who pulled up a chair. That same warmth still goes into every cup we serve.",
       "quote": "Good food tastes better when it’s shared with the people you love.",
       "fromFamily": "From our family to yours",
       "values": [

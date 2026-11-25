@@ -10,7 +10,8 @@ export default {
       "seeMenu": "Menyuu ilaali",
       "backToTop": "Gara ol'iiti",
       "openMenu": "Menyuu bani",
-      "closeMenu": "Menyuu cufi"
+      "closeMenu": "Menyuu cufi",
+      "mainNavigation": "Navigaasii guddaa"
     },
     "site": {
       "tagline": "Nyaan gaariidhaa, sharbatii haara'aa fi buna gaariidhaa.",
@@ -23,7 +24,8 @@ export default {
       "scanAtTable": "Tarree keessan irratti iskaanii",
       "scanForMenu": "Menyuu iskaanii",
       "backToHome": "Gara mana",
-      "mapNote": "Kaartiin darbii — teessoo dhugaa keessan dabalaa"
+      "mapNote": "Kaartii fakkaattsa — teessoo gama bitaa ti",
+      "mapPlaceholder": "Kaartii darbii"
     },
     "status": {
       "new": "Gaafannaa haara",
@@ -41,6 +43,10 @@ export default {
     },
     "language": {
       "label": "Afaan"
+    },
+    "theme": {
+      "light": "Gara iftiinii jijiiji",
+      "dark": "Gara dukkanaa jijiiji"
     }
   }
 }

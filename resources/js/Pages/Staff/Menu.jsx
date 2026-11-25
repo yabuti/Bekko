@@ -53,6 +53,18 @@ export default function MenuManager({ categories = [], items = [] }) {
     return () => URL.revokeObjectURL(url)
   }, [form.photo])
 
+  const isBusy = showForm || saving || deleting !== null
+
+  useEffect(() => {
+    if (isBusy) return undefined
+
+    const timer = window.setInterval(() => {
+      router.reload({ only: ['items'], preserveScroll: true, preserveState: true })
+    }, 5000)
+
+    return () => window.clearInterval(timer)
+  }, [isBusy])
+
   const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
     ? fallback
     : t(`menu.categories.${id}.label`)
@@ -87,6 +99,8 @@ export default function MenuManager({ categories = [], items = [] }) {
       name: '',
       category: categoryFilter === 'all' ? (categories[0]?.id ?? 'breakfast') : categoryFilter,
       group_label: '',
+      description: '',
+      ingredients: '',
       price: '',
       sort_order: '',
       photo: null,

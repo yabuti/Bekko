@@ -25,7 +25,7 @@ class StaffAuthController extends Controller
 
         if (! Auth::attempt($credentials)) {
             throw ValidationException::withMessages([
-                'email' => 'Those details do not match our records.',
+                'email' => __('messages.auth_failed'),
             ]);
         }
 
@@ -35,7 +35,7 @@ class StaffAuthController extends Controller
             Auth::logout();
 
             throw ValidationException::withMessages([
-                'email' => 'This account cannot access the staff dashboards.',
+                'email' => __('messages.staff_only'),
             ]);
         }
 

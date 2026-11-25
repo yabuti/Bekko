@@ -10,7 +10,8 @@ export default {
       "seeMenu": "See the menu",
       "backToTop": "Back to top",
       "openMenu": "Open menu",
-      "closeMenu": "Close menu"
+      "closeMenu": "Close menu",
+      "mainNavigation": "Main navigation"
     },
     "site": {
       "tagline": "Good food, fresh juice and proper coffee.",
@@ -23,7 +24,8 @@ export default {
       "scanAtTable": "Scan at your table",
       "scanForMenu": "Scan for the menu",
       "backToHome": "Back to home",
-      "mapNote": "Map preview — add your real address"
+      "mapNote": "Illustrated map — see the address on the left",
+      "mapPlaceholder": "Map preview"
     },
     "status": {
       "new": "New order",
@@ -41,6 +43,10 @@ export default {
     },
     "language": {
       "label": "Language"
+    },
+    "theme": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
     }
   }
 }

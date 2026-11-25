@@ -9,6 +9,11 @@ export default {
       "tables": "የጠረጴዛ QR",
       "menu": "የምናሌ አስተዳደር"
     },
+    "role": {
+      "waiter": "አስተናጋጅ",
+      "kitchen": "ወጥ ቤት",
+      "admin": "አስተዳዳሪ"
+    },
     "logout": "ውጣ",
     "liveOrders": "ቀጥታ ትዕዛዞች"
   }

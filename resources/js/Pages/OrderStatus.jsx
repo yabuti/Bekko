@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { router } from '@inertiajs/react'
 import { Check, ChefHat, ClipboardList, Coffee, RefreshCw } from 'lucide-react'
 import LanguageSwitcher from '../Components/LanguageSwitcher'
+import ThemeToggle from '../Components/ThemeToggle'
 import { useI18n, useSite } from '../i18n/index.jsx'
 
 const steps = [
@@ -31,7 +32,10 @@ export default function OrderStatus({ order }) {
       <header className="order-topbar">
         <a className="order-back" href="/">{t('orderStatus.home')}</a>
         <div className="order-table-pill">{order.table.name}</div>
-        <LanguageSwitcher />
+        <div className="header-controls">
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
       </header>
 
       <div className="container status-card">

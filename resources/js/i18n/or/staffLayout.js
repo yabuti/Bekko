@@ -9,6 +9,11 @@ export default {
       "tables": "QR tarree",
       "menu": "Buljii menyuu"
     },
+    "role": {
+      "waiter": "Tajaajilaa",
+      "kitchen": "Kushii",
+      "admin": "Bulchaa"
+    },
     "logout": "Ba'i",
     "liveOrders": "Gaafannaa yeroo darbii"
   }

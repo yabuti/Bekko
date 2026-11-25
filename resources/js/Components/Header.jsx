@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { ArrowUpRight, Menu as MenuIcon, X } from 'lucide-react'
 import Logo from './Logo'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from './ThemeToggle'
 import { useI18n } from '../i18n/index.jsx'
 
 export default function Header() {
@@ -30,7 +31,7 @@ export default function Header() {
           <Logo className="brand-logo" />
         </a>
 
-        <nav className={`header-nav${open ? ' is-open' : ''}`} aria-label="Main navigation">
+        <nav className={`header-nav${open ? ' is-open' : ''}`} aria-label={t('common.nav.mainNavigation')}>
           {links.map((link) => (
             <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
               {link.label}
@@ -45,7 +46,10 @@ export default function Header() {
           </a>
         </nav>
 
-        <LanguageSwitcher />
+        <div className="header-controls">
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
 
         <a className="button button-primary header-cta" href="/menu">
           {t('common.nav.seeMenu')} <ArrowUpRight size={17} />

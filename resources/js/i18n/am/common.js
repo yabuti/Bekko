@@ -10,7 +10,8 @@ export default {
       "seeMenu": "ምናሌውን ይመልከቱ",
       "backToTop": "ወደ ላይ",
       "openMenu": "ምናሌ ክፈት",
-      "closeMenu": "ምናሌ ዝጋ"
+      "closeMenu": "ምናሌ ዝጋ",
+      "mainNavigation": "ዋና ዳሰሳ"
     },
     "site": {
       "tagline": "ጥሩ ምግብ፣ ትኩስ ጭማቂ እና ጥሩ ቡና።",
@@ -23,7 +24,8 @@ export default {
       "scanAtTable": "በጠረጴዛዎ ላይ ይቃኙ",
       "scanForMenu": "ለምናሌ ይቃኙ",
       "backToHome": "ወደ ቤት",
-      "mapNote": "የካርታ ቅድመ እይታ — እውነተኛ አድራሻዎን ያክሉ"
+      "mapNote": "ምሳሌያዊ ካርታ — አድራሻውን በግራ በኩል ይመልከቱ",
+      "mapPlaceholder": "የካርታ ቅድመ እይታ"
     },
     "status": {
       "new": "አዲስ ትዕዛዝ",
@@ -41,6 +43,10 @@ export default {
     },
     "language": {
       "label": "ቋንቋ"
+    },
+    "theme": {
+      "light": "ወደ ብርሃን ሁኔታ ቀይር",
+      "dark": "ወደ ጨለማ ሁኔታ ቀይር"
     }
   }
 }

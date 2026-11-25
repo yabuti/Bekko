@@ -2,7 +2,7 @@
 // Change these values and the website updates everywhere.
 
 export const site = {
-  // TEMPORARY: change this if the folder name isn't the real cafe name.
+  // Placeholder — update when the real cafe name is confirmed.
   name: 'Bekko Coffee',
   tagline: 'Good food, fresh juice and proper coffee.',
   description:
@@ -15,7 +15,7 @@ export const site = {
     { day: 'Saturday – Sunday', time: '9:00 AM – 10:00 PM' },
   ],
 
-  // TEMPORARY: replace with the real address.
+  // Placeholder — update with the real address when available.
   address: ['123 Main Street', 'Your Town'],
   phone: '+00 000 000 000',
   email: 'hello@bekkocoffee.com',

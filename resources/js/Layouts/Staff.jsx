@@ -1,6 +1,7 @@
 import { router, usePage } from '@inertiajs/react'
 import { ClipboardList, QrCode, Utensils } from 'lucide-react'
 import LanguageSwitcher from '../Components/LanguageSwitcher'
+import ThemeToggle from '../Components/ThemeToggle'
 import { useI18n } from '../i18n/index.jsx'
 
 export default function Staff({ title, subtitle, children }) {
@@ -29,7 +30,10 @@ export default function Staff({ title, subtitle, children }) {
             )}
             <a href="/staff/tables"><QrCode size={16} /> {t('staffLayout.nav.tables')}</a>
           </nav>
-          <LanguageSwitcher />
+          <div className="header-controls">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
           <div className="staff-user">
             <span>{auth?.user?.name}</span>
             <button type="button" onClick={logout}>{t('staffLayout.logout')}</button>

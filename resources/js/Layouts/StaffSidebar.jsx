@@ -1,12 +1,14 @@
 import { Link, router, usePage } from '@inertiajs/react'
 import { BookOpen, ClipboardList, LogOut, QrCode, Utensils } from 'lucide-react'
 import LanguageSwitcher from '../Components/LanguageSwitcher'
+import ThemeToggle from '../Components/ThemeToggle'
 import { useI18n } from '../i18n/index.jsx'
 
 export default function StaffSidebar({ title, subtitle, children }) {
   const { t } = useI18n()
   const page = usePage()
   const role = page.props.auth?.user?.role
+  const roleLabel = role ? t(`staffLayout.role.${role}`) : ''
 
   const links = [
     ...(role === 'admin'
@@ -51,10 +53,13 @@ export default function StaffSidebar({ title, subtitle, children }) {
             </span>
             <div>
               <strong>{page.props.auth?.user?.name}</strong>
-              <span>{role}</span>
+              <span>{roleLabel}</span>
             </div>
           </div>
-          <LanguageSwitcher />
+          <div className="header-controls">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
           <button type="button" onClick={() => router.post('/staff/logout')}>
             <LogOut size={16} /> {t('staffLayout.logout')}
           </button>

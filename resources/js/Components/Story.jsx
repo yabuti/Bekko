@@ -28,8 +28,7 @@ export default function Story() {
           <h2>{t('home.story.title')}</h2>
           <p className="story-lead">{t('home.story.lead')}</p>
           <p className="story-text">{t('home.story.text')}</p>
-          {/* TEMPORARY: swap in the family's real story here. */}
-          <p className="story-text story-placeholder">{t('home.story.placeholder')}</p>
+          <p className="story-text">{t('home.story.family')}</p>
 
           <div className="values-list">
             {values.map(({ icon: Icon, title, text }) => (

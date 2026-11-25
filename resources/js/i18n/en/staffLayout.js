@@ -9,6 +9,11 @@ export default {
       "tables": "Table QR",
       "menu": "Menu manager"
     },
+    "role": {
+      "waiter": "Waiter",
+      "kitchen": "Kitchen",
+      "admin": "Administrator"
+    },
     "logout": "Log out",
     "liveOrders": "Live orders"
   }

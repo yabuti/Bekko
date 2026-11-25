@@ -84,16 +84,20 @@ Sign in as the admin and open `/staff/menu` (admins are sent there after login).
 
 Photos are stored in `public/menu-photos/` and appear straight away on `/menu` and on the customer QR menu. Deleting a meal keeps it out of both menus while preserving old order lines.
 
-Clicking a meal on `/menu` opens a detail view with its photo, full description, ingredients and price. On `/t/{code}` the same detail view includes an **Add to order** button, so customers can read about a dish before ordering it.
+Clicking a meal on `/menu` opens a detail view with its photo, full description, ingredients and price. On `/t/{code}` the same detail view includes an **Add to order** button, so customers can read about a dish before ordering it. Starter descriptions and ingredients for all 142 meals are seeded from `menuDetails.json`; admins can replace them at any time in the menu manager.
 
-> Reseeding with `MenuItemSeeder` restores prices and photos from `menu.json`, which will overwrite changes made in the admin page. Descriptions and ingredients are not in `menu.json`, so they are left alone by reseeding. Do not reseed after editing the menu in the admin page.
+> Reseeding with `MenuItemSeeder` restores prices and photos from `menu.json`, which will overwrite changes made in the admin page. `MenuItemDetailSeeder` only fills empty descriptions and ingredients, so admin-written details are preserved. Do not reseed prices and photos after editing the menu in the admin page.
 
 ## Editing content
 
 - `resources/js/data/menu.json` — the 142 menu items and prices (shared by React and the seeder)
+- `resources/js/data/menuDetails.json` — starter descriptions and ingredient lists for the detail views
 - `config/site.php` — cafe name, hours, address, phone, email, Instagram and currency
 - `public/{breakfast,lunch,drink}/` — real menu photos, mapped by name in `resources/js/data/menuPhotos.json`
 - `resources/js/i18n/{en,am,or}/` — one folder per language, with one file per page (English, Amharic, Afaan Oromoo)
+
+The compact **en / am / or** switcher and the light/dark toggle are available in the header on every page (and in the staff navigation). Both choices are saved in the browser and applied on the next visit.
+
 - `public/images/*.svg` — fallback thumbnails used when a menu item has no photo
 - `public/menu-photos/` — photos uploaded in the admin page (gitignored)
 

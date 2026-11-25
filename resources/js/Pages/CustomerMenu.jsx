@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { router, usePage } from '@inertiajs/react'
 import { ArrowLeft, Minus, Plus, ShoppingBag } from 'lucide-react'
 import LanguageSwitcher from '../Components/LanguageSwitcher'
+import ThemeToggle from '../Components/ThemeToggle'
 import MenuItemDetail from '../Components/MenuItemDetail'
 import { itemImage } from '../data/menuImages'
 import { useI18n, useSite } from '../i18n/index.jsx'
@@ -94,7 +95,10 @@ export default function CustomerMenu({ table, categories, items }) {
           <ArrowLeft size={17} /> {t('customerMenu.home')}
         </a>
         <div className="order-table-pill">{table.name} · {table.code}</div>
-        <LanguageSwitcher />
+        <div className="header-controls">
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
       </header>
 
       <section className="order-hero container">

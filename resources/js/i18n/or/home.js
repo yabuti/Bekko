@@ -46,7 +46,7 @@ export default {
       "title": "Iddoo xiqqaa kan jaalala guddaa qabu",
       "lead": "Yaada salphaan eessaa jalqabne: sharbatii gaariidhaa, nyaa dhugaa fi buna gaariidhaa hundi iddoo tokkottii.",
       "text": "Yeroo hojii dhaabaniif macchiato saffisaa fudhattanuu, burgerii fi fries taa'uuttis, ykn sharbatii haara'aa dhugaa haasofkofattanuu, iddoo keessan ni jira.",
-      "placeholder": "[Waa'ee abbaa keessanii fi eessaa kafeen jalqabe jedhee hima tokko ykn lama dabalaa.]",
+      "family": "Kafeen jalqabe aadaa bunaa fi nyaa haara'aa namoota teejiif ta'u waliin qooduu irraa dha. Ho'a fi simannaa sun har'aas buna hunda keessaa ni jira.",
       "quote": "Nyaan gaariin yeroo dadhamaa jaalattan waliin nyaatamu ni dabalata.",
       "fromFamily": "Maqaa keennaa gara maqaa keessanii",
       "values": [

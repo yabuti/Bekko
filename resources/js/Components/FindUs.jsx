@@ -60,13 +60,13 @@ export default function FindUs({ menuUrl }) {
           </div>
 
           <div className="visit-side">
-            <div className="map-card" aria-label="Map placeholder">
+            <div className="map-card" aria-label={t('common.site.mapPlaceholder')}>
               <div className="map-grid" />
               <div className="map-road map-road-one" />
               <div className="map-road map-road-two" />
               <span className="map-pin"><MapPin size={26} fill="currentColor" /></span>
               <div className="map-label">{site.name}</div>
-              {/* TEMPORARY: replace with a Google Maps embed once the real address is set. */}
+              {/* Illustrated preview until a real map embed is supplied. */}
               <span className="map-note">{t('common.site.mapNote')}</span>
             </div>
 
