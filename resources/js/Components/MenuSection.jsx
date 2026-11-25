@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Beef, Coffee, GlassWater, Printer, Utensils } from 'lucide-react'
+import { Beef, ChevronDown, Coffee, GlassWater, Printer, Utensils } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import { menu } from '../data/menu'
 import { itemImage } from '../data/menuImages'
@@ -15,12 +15,32 @@ const categoryIcons = {
   fresh: GlassWater,
 }
 
+const PAGE_SIZE = 12
+
+function paginateCategory(category, limit) {
+  const groups = []
+  let remaining = limit
+
+  category.groups.forEach((group) => {
+    if (remaining <= 0) return
+
+    const items = group.items.slice(0, remaining)
+    if (!items.length) return
+
+    groups.push({ ...group, items })
+    remaining -= items.length
+  })
+
+  return groups
+}
+
 export default function MenuSection({ menuUrl, categories, items }) {
   const { t } = useI18n()
   const site = useSite()
   const sourceCategories = categories ?? menu
   const [active, setActive] = useState(sourceCategories[0]?.id ?? 'breakfast')
   const [selected, setSelected] = useState(null)
+  const [limits, setLimits] = useState({})
 
   // Database-backed items are grouped here so admin edits show up on the public menu.
   const view = sourceCategories.map((category) => {
@@ -41,6 +61,14 @@ export default function MenuSection({ menuUrl, categories, items }) {
 
   const filters = view.map(({ id }) => ({ id }))
   const visible = active === 'all' ? view : view.filter((category) => category.id === active)
+
+  const currentCategory = view.find((category) => category.id === active)
+  const currentTotal = currentCategory
+    ? currentCategory.groups.reduce((sum, group) => sum + group.items.length, 0)
+    : 0
+  const currentLimit = active === 'all' ? currentTotal : limits[active] ?? PAGE_SIZE
+  const currentShown = Math.min(currentLimit, currentTotal)
+  const canLoadMore = active !== 'all' && currentShown < currentTotal
 
   const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
     ? fallback
@@ -115,8 +143,9 @@ export default function MenuSection({ menuUrl, categories, items }) {
         <div className="menu-stream">
           {visible.flatMap((category) => {
             const Icon = categoryIcons[category.id] ?? Utensils
+            const limit = active === 'all' ? Infinity : limits[category.id] ?? PAGE_SIZE
 
-            return category.groups.map((group, groupIndex) => (
+            return paginateCategory(category, limit).map((group, groupIndex) => (
               <div className="menu-block" key={`${category.id}-${group.label || 'main'}`}>
                 {groupIndex === 0 && (
                   <>
@@ -173,6 +202,22 @@ export default function MenuSection({ menuUrl, categories, items }) {
             ))
           })}
         </div>
+
+        {canLoadMore && (
+          <div className="menu-more">
+            <button
+              type="button"
+              className="button button-outline"
+              onClick={() => setLimits((current) => ({
+                ...current,
+                [active]: (current[active] ?? PAGE_SIZE) + PAGE_SIZE,
+              }))}
+            >
+              <ChevronDown size={17} /> {t('menu.loadMore')}
+            </button>
+            <span>{t('menu.showing', { shown: currentShown, total: currentTotal })}</span>
+          </div>
+        )}
       </div>
 
       <MenuItemDetail

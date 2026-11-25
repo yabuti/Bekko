@@ -649,6 +649,19 @@ img {
   gap: 26px;
 }
 
+.menu-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.menu-more span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .menu-block {
   break-inside: avoid;
   page-break-inside: avoid;
@@ -1900,6 +1913,12 @@ img {
     align-items: flex-start;
   }
 
+  .menu-more {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
   .formal-grid,
   .detail-modal {
     grid-template-columns: 1fr;
@@ -2057,6 +2076,7 @@ img {
   .demo-note,
   .menu-toolbar,
   .menu-page-nav,
+  .menu-more,
   .print-button,
   .screen-only,
   .detail-backdrop {

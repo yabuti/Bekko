@@ -8,6 +8,8 @@ export default {
     "print": "Menyuu naqaa",
     "categoriesLabel": "Kutaalee menyuu",
     "scanForMenu": "Menyuu iskaanii",
+    "loadMore": "Dabalata agarsiisi",
+    "showing": "{shown} / {total} agarsiifame",
     "categories": {
       "breakfast": {
         "label": "Qor'annaa",

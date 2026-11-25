@@ -8,6 +8,8 @@ export default {
     "print": "Print menu",
     "categoriesLabel": "Menu categories",
     "scanForMenu": "Scan for the menu",
+    "loadMore": "Load more",
+    "showing": "Showing {shown} of {total}",
     "categories": {
       "breakfast": {
         "label": "Breakfast",

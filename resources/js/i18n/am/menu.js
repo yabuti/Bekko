@@ -8,6 +8,8 @@ export default {
     "print": "ምናሌውን አትም",
     "categoriesLabel": "የምናሌ ምድቦች",
     "scanForMenu": "ለምናሌ ይቃኙ",
+    "loadMore": "ተጨማሪ አሳይ",
+    "showing": "{shown} ከ {total} ውስጥ እየታየ ነው",
     "categories": {
       "breakfast": {
         "label": "ቁርስ",
