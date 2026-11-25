@@ -6,6 +6,7 @@ import { itemImage } from '../data/menuImages'
 import { useI18n, useSite } from '../i18n/index.jsx'
 import Logo from './Logo'
 import MenuItemDetail from './MenuItemDetail'
+import TableEntryForm from './TableEntryForm'
 
 const categoryIcons = {
   breakfast: Coffee,
@@ -120,6 +121,10 @@ export default function MenuSection({ menuUrl, categories, items }) {
           <button type="button" className="button button-outline print-button" onClick={handlePrint}>
             <Printer size={17} /> {t('menu.print')}
           </button>
+        </div>
+
+        <div className="menu-table-entry screen-only">
+          <TableEntryForm compact />
         </div>
 
         <div className="menu-toolbar" role="tablist" aria-label={t('menu.categoriesLabel')}>

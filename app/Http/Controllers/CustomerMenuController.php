@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FindTableRequest;
 use App\Models\CafeTable;
 use App\Models\MenuItem;
+use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
 use Inertia\Response;
 use JsonException;
 
 class CustomerMenuController extends Controller
 {
+    public function findTable(FindTableRequest $request): RedirectResponse
+    {
+        return redirect()->route('tables.menu', $request->validated()['table_number']);
+    }
+
     /**
      * @throws JsonException
      */
