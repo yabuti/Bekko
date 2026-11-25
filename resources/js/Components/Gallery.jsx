@@ -2,12 +2,12 @@ import { ArrowUpRight } from 'lucide-react'
 import { useI18n } from '../i18n/index.jsx'
 
 const photos = [
-  { src: '/breakfast/special%20chechebsa.webp', className: 'gallery-tile--feature' },
-  { src: '/drink/Espresso.webp', className: 'gallery-tile--wide' },
-  { src: '/lunch/Special%20Burger.webp', className: 'gallery-tile--small' },
-  { src: '/lunch/Fruit%20Punch.webp', className: 'gallery-tile--small' },
-  { src: '/lunch/Special%20Pizza.webp', className: 'gallery-tile--wide' },
-  { src: '/drink/Macchiato.webp', className: 'gallery-tile--wide' },
+  '/breakfast/special%20chechebsa.webp',
+  '/drink/Espresso.webp',
+  '/lunch/Special%20Burger.webp',
+  '/lunch/Fruit%20Punch.webp',
+  '/lunch/Special%20Pizza.webp',
+  '/drink/Macchiato.webp',
 ]
 
 export default function Gallery() {
@@ -29,12 +29,14 @@ export default function Gallery() {
         </div>
 
         <div className="gallery-grid">
-          {photos.map(({ src, className }, index) => {
+          {photos.map((src, index) => {
             const caption = t(`home.gallery.items.${index}.caption`)
 
             return (
-              <figure className={`gallery-tile ${className}`} key={src}>
-                <img src={src} alt={caption} loading="lazy" decoding="async" />
+              <figure className="gallery-tile" key={src}>
+                <div className="gallery-image">
+                  <img src={src} alt={caption} loading="lazy" decoding="async" />
+                </div>
                 <figcaption>{caption}</figcaption>
               </figure>
             )
