@@ -64,6 +64,77 @@ export default {
         }
       ]
     },
+    "gallery": {
+      "eyebrow": "From the counter",
+      "title": "A little look around",
+      "subtitle": "Breakfast, lunch, something cold, and a proper cup — here’s a taste of the table.",
+      "items": [
+        {
+          "caption": "Chechebsa, fresh off the pan"
+        },
+        {
+          "caption": "Espresso, pulled to order"
+        },
+        {
+          "caption": "Special burger"
+        },
+        {
+          "caption": "Fruit punch"
+        },
+        {
+          "caption": "Pizza from the oven"
+        },
+        {
+          "caption": "Macchiato and a slow morning"
+        }
+      ]
+    },
+    "guests": {
+      "eyebrow": "Guest notes",
+      "title": "Kind words from the table",
+      "subtitle": "The best part of the day is seeing people come back for another cup.",
+      "quotes": [
+        {
+          "quote": "The juice is fresh, the burger is proper, and the coffee keeps me coming back.",
+          "role": "Regular guest"
+        },
+        {
+          "quote": "Ordering from the table was easy, and it was ready before my meeting ended.",
+          "role": "Lunch guest"
+        },
+        {
+          "quote": "It feels like a place where everyone knows your order.",
+          "role": "Morning regular"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good to know",
+      "title": "Questions, answered",
+      "subtitle": "A few things guests ask before they sit down.",
+      "items": [
+        {
+          "question": "Do I need to scan a QR code to order?",
+          "answer": "No. You can browse the menu here, then order at the counter. If you’re at a table, the QR code takes you straight to its menu."
+        },
+        {
+          "question": "Can I see prices before I order?",
+          "answer": "Yes. Every item shows its price, description and ingredients. Prices are in Ethiopian birr (ETB)."
+        },
+        {
+          "question": "Is there something for vegetarians?",
+          "answer": "Yes. The menu has vegetable pizza, salads, shiro, pasta with vegetables and fresh juices."
+        },
+        {
+          "question": "Do you open on weekends?",
+          "answer": "Yes — we’re open on weekdays and weekends. The current hours are listed in the Find us section."
+        },
+        {
+          "question": "Can I track my order after placing it?",
+          "answer": "Yes. After ordering, use the phone number or order token we give you to check whether it’s new, preparing, ready or served."
+        }
+      ]
+    },
     "visit": {
       "eyebrow": "Find us",
       "title": "Come say hello",

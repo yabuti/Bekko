@@ -64,6 +64,77 @@ export default {
         }
       ]
     },
+    "gallery": {
+      "eyebrow": "Kafeen keessaa",
+      "title": "Iddoo taa'umsaa keessaa ilaalii",
+      "subtitle": "Nyaata ulfaa, sharbatii qorixaa fi buna gaariidhaa — dhandhamii iddoo taa'umsaa.",
+      "items": [
+        {
+          "caption": "Chechebsa haara'aa"
+        },
+        {
+          "caption": "Espresso gaafatamee qophaa'aa"
+        },
+        {
+          "caption": "Burgerii addaa"
+        },
+        {
+          "caption": "Sharbatii fruutaa"
+        },
+        {
+          "caption": "Pizza iraa dhufe"
+        },
+        {
+          "caption": "Macchiato fi ganama boqonnaa"
+        }
+      ]
+    },
+    "guests": {
+      "eyebrow": "Dubbii dhugaa'aa",
+      "title": "Dubbii gaariin iddoo taa'umsaa irraa",
+      "subtitle": "Namoonni buna darbii fudhatanii deebijanii argachuu kun ci'a guudaa dha.",
+      "quotes": [
+        {
+          "quote": "Sharbatiin haara'aa, burgeriin gaariidhaa, bunin immoo na deebisiisa.",
+          "role": "Dhugaa'aa dhaabaa"
+        },
+        {
+          "quote": "Gaafannaa iddoo taa'umsaa irraa salphaa ture; walitti qabamaa koon xumuruun dura qophaa'e.",
+          "role": "Dhugaa'aa nyaata ulfaa"
+        },
+        {
+          "quote": "Namoonni maal jedhanii barbaadan beekan iddoo fakkaata.",
+          "role": "Dhugaa'aa ganamaa"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Waan beekuu barbaachisu",
+      "title": "Gaaffii fi deebii",
+      "subtitle": "Dhugaa'aan taa'uu dura gaafatan tokko tokko.",
+      "items": [
+        {
+          "question": "Gaafachuuf QR koodii iskaanii barbaachisa?",
+          "answer": "Lakkii. Menyuu asitti ilaaluu dandeessu, itti aansuun immoo counter irratti gaafattu. Yoo iddoo taa'umsaa jirtellee, QR koodii si geessee menyuu iddoo kanaa agarsiisa."
+        },
+        {
+          "question": "Deebii qaawuun dura gatii argachuu dandeenyaa?",
+          "answer": "Dandeenya. Nyaa hundi gatii isaa, ibsa isaa fi mi'aa isaa ni agarsiisa. Gatiiwwan buna biyyattii (ETB) irratti."
+        },
+        {
+          "question": "Nyaata kuduraa qofa ni jira?",
+          "answer": "Ni jira. Pizza kuduraa, salaata, shiroo, paastaa kuduraa fi sharbatii haara'aa menyuu keessatti ni jiru."
+        },
+        {
+          "question": "Sanbata fi dibayyana bana jirtuu?",
+          "answer": "Ni jiru — guyuu hojii fi sanbata/dibayyana hunda bana jiru. Yeroo banaa ammaa kotta Nuu argadhaa keessatti argama."
+        },
+        {
+          "question": "Gaafannaa koon deebii hordofuu dandeenyaa?",
+          "answer": "Dandeenya. Gaafachuu booda, bilbila ykn koodii gaafannaa isinii dhaamne fayyadamuun gaafannaan haara'a, qophaa'aa, darbii fi tajaajilame ta'uu isaa beekuu dandeessa."
+        }
+      ]
+    },
     "visit": {
       "eyebrow": "Nuu argadhaa",
       "title": "Dhuftanii nuu baha",

@@ -2,6 +2,9 @@ import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import Highlights from '../Components/Highlights'
 import Story from '../Components/Story'
+import Gallery from '../Components/Gallery'
+import GuestQuotes from '../Components/GuestQuotes'
+import Faq from '../Components/Faq'
 import FindUs from '../Components/FindUs'
 import Footer from '../Components/Footer'
 
@@ -17,6 +20,9 @@ export default function Home() {
         <Hero />
         <Highlights />
         <Story />
+        <Gallery />
+        <GuestQuotes />
+        <Faq />
         <FindUs menuUrl={qrUrl} />
       </main>
       <Footer />
