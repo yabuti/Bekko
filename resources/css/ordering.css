@@ -1,39 +1,97 @@
 /* ---------- language and theme controls ---------- */
-.language-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  padding: 3px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
+.language-dropdown {
+  position: relative;
   flex: 0 0 auto;
 }
 
-.language-switcher button {
-  min-width: 30px;
-  padding: 6px 8px;
-  border: 0;
+.language-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
+  background: var(--surface);
+  color: var(--ink);
   font: inherit;
   font-size: 0.7rem;
   font-weight: 800;
   line-height: 1;
   text-transform: lowercase;
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-trigger:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.language-chevron {
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.language-chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 80;
+  display: grid;
+  gap: 2px;
+  min-width: 86px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 16px 36px rgba(16, 54, 29, 0.16);
+  animation: language-menu-in 0.16s ease-out;
+}
+
+@keyframes language-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.language-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: lowercase;
+  cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.language-switcher button:hover {
+.language-menu button:hover {
   background: var(--green-50);
   color: var(--accent-strong);
 }
 
-.language-switcher button.is-active {
-  background: var(--green-800);
-  color: #ffffff;
+.language-menu button.is-active {
+  background: var(--green-100);
+  color: var(--accent-strong);
 }
 
 .theme-toggle {
@@ -55,7 +113,8 @@
   transform: translateY(-1px);
 }
 
-.language-switcher button:focus-visible,
+.language-trigger:focus-visible,
+.language-menu button:focus-visible,
 .theme-toggle:focus-visible {
   outline: 2px solid var(--green-600);
   outline-offset: 2px;
