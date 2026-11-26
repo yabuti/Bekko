@@ -31,6 +31,18 @@ class OrderStatusTest extends TestCase
         $this->assertSame('ready', $order->fresh()->status);
     }
 
+    public function test_waiter_accepts_a_pending_request_before_the_kitchen_starts(): void
+    {
+        $waiter = User::factory()->create(['role' => 'waiter']);
+        $order = $this->order('pending');
+
+        $this->actingAs($waiter)
+            ->post(route('staff.orders.status', $order), ['status' => 'new'])
+            ->assertSessionHasNoErrors();
+
+        $this->assertSame('new', $order->fresh()->status);
+    }
+
     public function test_waiter_serves_ready_orders(): void
     {
         $waiter = User::factory()->create(['role' => 'waiter']);
@@ -59,9 +71,12 @@ class OrderStatusTest extends TestCase
     public static function invalidTransitions(): array
     {
         return [
+            ['kitchen', 'pending', 'preparing'],
             ['kitchen', 'new', 'ready'],
+            ['waiter', 'pending', 'served'],
             ['waiter', 'new', 'served'],
             ['waiter', 'preparing', 'served'],
+            ['admin', 'pending', 'ready'],
             ['admin', 'new', 'served'],
             ['admin', 'ready', 'preparing'],
         ];
@@ -83,7 +98,9 @@ class OrderStatusTest extends TestCase
     public static function forbiddenTransitions(): array
     {
         return [
+            ['kitchen', 'pending', 'new'],
             ['kitchen', 'ready', 'served'],
+            ['waiter', 'pending', 'preparing'],
             ['waiter', 'new', 'preparing'],
             ['waiter', 'preparing', 'ready'],
         ];
@@ -95,6 +112,8 @@ class OrderStatusTest extends TestCase
 
         return Order::create([
             'cafe_table_id' => $table->id,
+            'customer_name' => 'Test Customer',
+            'order_type' => 'dine_in',
             'token' => 'status-test-token',
             'status' => $status,
             'total' => 100,

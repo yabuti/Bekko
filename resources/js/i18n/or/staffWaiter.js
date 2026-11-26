@@ -8,6 +8,7 @@ export default {
     "recentlyServed": "Tajaajilamee darbii",
     "noActive": "Amma gaafannaa aktiivii hin jiru.",
     "nothingServed": "Waan tajaajilame hin jiru.",
+    "acceptOrder": "Gaafannaa fudhachi",
     "markServed": "Tajaajilame jedhee mallatteessi"
   }
 }

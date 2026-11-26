@@ -20,6 +20,12 @@ export default function Waiter({ orders }) {
   const active = orders.filter((order) => order.status !== 'served')
   const served = orders.filter((order) => order.status === 'served')
 
+  const actionsFor = (order) => {
+    if (order.status === 'pending') return [{ label: t('staffWaiter.acceptOrder'), status: 'new' }]
+    if (order.status === 'ready') return [{ label: t('staffWaiter.markServed'), status: 'served' }]
+    return []
+  }
+
   return (
     <Staff
       title={t('staffWaiter.title')}
@@ -34,9 +40,7 @@ export default function Waiter({ orders }) {
                 key={order.id}
                 order={order}
                 currency={currency}
-                actions={order.status === 'ready'
-                  ? [{ label: t('staffWaiter.markServed'), status: 'served' }]
-                  : []}
+                actions={actionsFor(order)}
               />
             ))}
             {!active.length && <p className="staff-empty">{t('staffWaiter.noActive')}</p>}

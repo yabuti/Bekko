@@ -14,9 +14,10 @@ use Inertia\Response;
 
 class OrderController extends Controller
 {
-    public function store(StoreOrderRequest $request, CafeTable $cafeTable): RedirectResponse
+    public function store(StoreOrderRequest $request): RedirectResponse
     {
-        $lines = collect($request->validated()['items']);
+        $data = $request->validated();
+        $lines = collect($data['items']);
 
         $menuItems = MenuItem::query()
             ->whereIn('id', $lines->pluck('id'))
@@ -40,13 +41,20 @@ class OrderController extends Controller
             $total += $menuItem->price * $quantity;
         }
 
-        $order = DB::transaction(function () use ($cafeTable, $request, $orderLines, $total) {
+        $tableId = $data['order_type'] === 'dine_in'
+            ? CafeTable::query()->where('code', $data['table_number'])->value('id')
+            : null;
+
+        $order = DB::transaction(function () use ($data, $tableId, $orderLines, $total) {
             $order = Order::create([
-                'cafe_table_id' => $cafeTable->id,
+                'cafe_table_id' => $tableId,
+                'customer_name' => $data['customer_name'],
+                'order_type' => $data['order_type'],
+                'delivery_location' => $data['order_type'] === 'delivery' ? $data['delivery_location'] : null,
                 'token' => Str::uuid()->toString(),
-                'status' => 'new',
+                'status' => 'pending',
                 'total' => $total,
-                'notes' => $request->validated()['notes'] ?? null,
+                'notes' => $data['notes'] ?? null,
             ]);
 
             $order->items()->createMany($orderLines);
@@ -68,8 +76,11 @@ class OrderController extends Controller
                 'status' => $order->status,
                 'total' => $order->total,
                 'notes' => $order->notes,
+                'customer_name' => $order->customer_name,
+                'order_type' => $order->order_type,
+                'delivery_location' => $order->delivery_location,
                 'created_at' => $order->created_at->toIso8601String(),
-                'table' => ['name' => $order->cafeTable->name],
+                'table' => ['name' => $order->cafeTable?->name],
                 'items' => $order->items->map(fn ($item) => [
                     'id' => $item->id,
                     'name' => $item->name,

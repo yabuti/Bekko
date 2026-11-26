@@ -8,6 +8,7 @@ export default {
     "recentlyServed": "በቅርቡ የቀረቡ",
     "noActive": "አሁን ምንም ንቁ ትዕዛዝ የለም።",
     "nothingServed": "ምንም ያገለገለ ነገር የለም።",
+    "acceptOrder": "ጥያቄውን ቀበል",
     "markServed": "እንደቀረበ ምልክት አድርግ"
   }
 }

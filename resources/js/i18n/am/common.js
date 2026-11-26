@@ -31,6 +31,7 @@ export default {
       "mapPlaceholder": "የካርታ ቅድመ እይታ"
     },
     "status": {
+      "pending": "መቀበልን በመጠበቅ ላይ",
       "new": "አዲስ ትዕዛዝ",
       "preparing": "በወጥ ቤት ውስጥ",
       "ready": "ለማገልገል ዝግጁ",
@@ -38,6 +39,10 @@ export default {
     },
     "orderCard": {
       "order": "ትዕዛዝ #{id}",
+      "customer": "ደንበኛ",
+      "location": "ቦታ",
+      "delivery": "ማድረስ",
+      "tableUnknown": "ጠረጴዛ",
       "note": "ማስታወሻ፡ {note}"
     },
     "update": {

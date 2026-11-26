@@ -16,7 +16,7 @@ Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
 Route::post('/order/table', [CustomerMenuController::class, 'findTable'])->name('order.table');
 
 Route::get('/t/{cafeTable:code}', [CustomerMenuController::class, 'show'])->name('tables.menu');
-Route::post('/t/{cafeTable:code}/orders', [OrderController::class, 'store'])->name('orders.store');
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 Route::get('/orders/{order:token}', [OrderController::class, 'show'])->name('orders.status');
 
 Route::get('/staff/login', [StaffAuthController::class, 'showLogin'])->name('staff.login');

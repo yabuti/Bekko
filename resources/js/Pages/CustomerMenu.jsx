@@ -1,9 +1,10 @@
 import { useMemo, useState } from 'react'
 import { router, usePage } from '@inertiajs/react'
-import { ArrowLeft, Minus, Plus, ShoppingBag } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Minus, Plus, ShoppingBag } from 'lucide-react'
 import LanguageSwitcher from '../Components/LanguageSwitcher'
 import ThemeToggle from '../Components/ThemeToggle'
 import MenuItemDetail from '../Components/MenuItemDetail'
+import CheckoutModal from '../Components/CheckoutModal'
 import { itemImage } from '../data/menuImages'
 import { useI18n, useSite } from '../i18n/index.jsx'
 
@@ -17,6 +18,12 @@ export default function CustomerMenu({ table, categories, items }) {
   const [notes, setNotes] = useState('')
   const [placing, setPlacing] = useState(false)
   const [selected, setSelected] = useState(null)
+  const [checkoutOpen, setCheckoutOpen] = useState(false)
+  const [customerName, setCustomerName] = useState('')
+  const [orderType, setOrderType] = useState('dine_in')
+  const [tableNumber, setTableNumber] = useState(table.code.replace(/^T/i, ''))
+  const [deliveryLocation, setDeliveryLocation] = useState('')
+  const [checkoutErrors, setCheckoutErrors] = useState({})
 
   const categoryLabel = (id, fallback) => t(`menu.categories.${id}.label`) === `menu.categories.${id}.label`
     ? fallback
@@ -80,10 +87,60 @@ export default function CustomerMenu({ table, categories, items }) {
     })
   }
 
-  const placeOrder = () => {
+  const openCheckout = () => {
     if (!lines.length || placing) return
+    setCheckoutErrors({})
+    setCheckoutOpen(true)
+  }
+
+  const changeOrderType = (type) => {
+    setOrderType(type)
+    setCheckoutErrors((current) => ({
+      ...current,
+      table_number: null,
+      delivery_location: null,
+    }))
+  }
+
+  const submitOrder = (event) => {
+    event.preventDefault()
+    if (!lines.length || placing) return
+
+    const nextErrors = {}
+    if (!customerName.trim()) nextErrors.customer_name = t('checkout.errorName')
+
+    if (orderType === 'dine_in') {
+      if (!/^T?\s*\d{1,2}$/i.test(tableNumber.trim())) {
+        nextErrors.table_number = t('checkout.errorTable')
+      }
+    } else if (!deliveryLocation.trim()) {
+      nextErrors.delivery_location = t('checkout.errorLocation')
+    }
+
+    if (Object.keys(nextErrors).length) {
+      setCheckoutErrors(nextErrors)
+      return
+    }
+
+    setCheckoutErrors({})
     setPlacing(true)
-    router.post(`/t/${table.code}/orders`, { items: lines, notes }, {
+
+    router.post('/orders', {
+      items: lines,
+      notes,
+      customer_name: customerName.trim(),
+      order_type: orderType,
+      ...(orderType === 'dine_in'
+        ? { table_number: tableNumber.trim() }
+        : { delivery_location: deliveryLocation.trim() }),
+    }, {
+      onError: (serverErrors) => {
+        const mapped = {}
+        if (serverErrors.customer_name) mapped.customer_name = serverErrors.customer_name
+        if (serverErrors.table_number) mapped.table_number = serverErrors.table_number
+        if (serverErrors.delivery_location) mapped.delivery_location = serverErrors.delivery_location
+        setCheckoutErrors(mapped)
+      },
       onFinish: () => setPlacing(false),
     })
   }
@@ -209,9 +266,9 @@ export default function CustomerMenu({ table, categories, items }) {
               type="button"
               className="button button-primary"
               disabled={!count || placing}
-              onClick={placeOrder}
+              onClick={openCheckout}
             >
-              {placing ? t('customerMenu.sending') : t('customerMenu.placeOrder')} <Plus size={16} />
+              {t('customerMenu.checkout')} <ArrowRight size={16} />
             </button>
           </div>
         </div>
@@ -237,6 +294,33 @@ export default function CustomerMenu({ table, categories, items }) {
           <Plus size={16} /> {t('menuDetail.addToOrder')}
         </button>
       </MenuItemDetail>
+
+      <CheckoutModal
+        open={checkoutOpen}
+        count={count}
+        total={total}
+        name={customerName}
+        orderType={orderType}
+        tableNumber={tableNumber}
+        location={deliveryLocation}
+        errors={checkoutErrors}
+        submitting={placing}
+        onNameChange={(value) => {
+          setCustomerName(value)
+          setCheckoutErrors((current) => ({ ...current, customer_name: null }))
+        }}
+        onOrderTypeChange={changeOrderType}
+        onTableNumberChange={(value) => {
+          setTableNumber(value)
+          setCheckoutErrors((current) => ({ ...current, table_number: null }))
+        }}
+        onLocationChange={(value) => {
+          setDeliveryLocation(value)
+          setCheckoutErrors((current) => ({ ...current, delivery_location: null }))
+        }}
+        onClose={() => setCheckoutOpen(false)}
+        onSubmit={submitOrder}
+      />
     </div>
   )
 }

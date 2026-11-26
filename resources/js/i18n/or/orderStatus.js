@@ -6,8 +6,16 @@ export default {
     "eyebrow": "Gaafannaa #{id}",
     "heading": "Galatoomaa — gaafannaa keessan nuu ga'e",
     "intro": "Keessatti {table} eeggadhaa. Barsiisan kun waldarbii 5 sekondiin ofii haaromfama.",
+    "delivery": "Geessii",
+    "pendingTitle": "Tajaajilaa gaafannaa keessan fudhachaa jira",
+    "pendingHint": "Galatoomaa, {name}. Kushii utuu hin jalqabttiin tajaajilaan gaafannaa keessan ni mirkaneessa.",
+    "customer": "Hojjettaa",
     "live": "Deebii yeroo darbii",
     "steps": [
+      {
+        "label": "Tajaajilaan fudhate",
+        "hint": "Gaafannaa keessan mirkanaa'e"
+      },
       {
         "label": "Gaafannaa dhuge",
         "hint": "Kushii gaafannaa keessan qabdi"

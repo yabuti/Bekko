@@ -8,6 +8,7 @@ export default {
     "recentlyServed": "Recently served",
     "noActive": "No active orders yet.",
     "nothingServed": "Nothing served yet.",
+    "acceptOrder": "Accept request",
     "markServed": "Mark as served"
   }
 }

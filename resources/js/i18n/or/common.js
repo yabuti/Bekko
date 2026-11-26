@@ -31,6 +31,7 @@ export default {
       "mapPlaceholder": "Kaartii darbii"
     },
     "status": {
+      "pending": "Eeggannaa fudhachaa jira",
       "new": "Gaafannaa haara",
       "preparing": "Qophaa'aa jira",
       "ready": "Tajaajiluuf qophii",
@@ -38,6 +39,10 @@ export default {
     },
     "orderCard": {
       "order": "Gaafannaa #{id}",
+      "customer": "Hojjettaa",
+      "location": "Iddoo",
+      "delivery": "Geessii",
+      "tableUnknown": "Manaargaa",
       "note": "Yaadannoo: {note}"
     },
     "update": {

@@ -31,6 +31,7 @@ export default {
       "mapPlaceholder": "Map preview"
     },
     "status": {
+      "pending": "Waiting for acceptance",
       "new": "New order",
       "preparing": "In the kitchen",
       "ready": "Ready to serve",
@@ -38,6 +39,10 @@ export default {
     },
     "orderCard": {
       "order": "Order #{id}",
+      "customer": "Customer",
+      "location": "Location",
+      "delivery": "Delivery",
+      "tableUnknown": "Table",
       "note": "Note: {note}"
     },
     "update": {

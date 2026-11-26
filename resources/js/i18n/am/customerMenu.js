@@ -13,6 +13,7 @@ export default {
     "itemOne": "በትዕዛዝዎ ውስጥ 1 ንጥል",
     "itemMany": "በትዕዛዝዎ ውስጥ {count} ንጥሎች",
     "notesPlaceholder": "ለወጥ ቤት ማስታወሻ (አማራጭ)",
+    "checkout": "ወደ ማጠናቀቂያ ቀጥል",
     "placeOrder": "ትዕዛዝ ስጥ",
     "sending": "በመላክ ላይ…"
   }

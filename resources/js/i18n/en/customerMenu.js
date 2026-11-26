@@ -13,6 +13,7 @@ export default {
     "itemOne": "1 item in your order",
     "itemMany": "{count} items in your order",
     "notesPlaceholder": "Note for the kitchen (optional)",
+    "checkout": "Continue to checkout",
     "placeOrder": "Place order",
     "sending": "Sending…"
   }

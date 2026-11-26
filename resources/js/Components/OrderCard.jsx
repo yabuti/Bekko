@@ -13,7 +13,11 @@ export default function OrderCard({ order, currency, actions = [] }) {
     <article className={`staff-order status-${order.status}`}>
       <div className="staff-order-head">
         <div>
-          <span className="staff-order-table">{order.cafe_table?.name}</span>
+          <span className="staff-order-table">
+            {order.order_type === 'delivery'
+              ? t('common.orderCard.delivery')
+              : (order.cafe_table?.name || t('common.orderCard.tableUnknown'))}
+          </span>
           <span className="staff-order-number">{t('common.orderCard.order', { id: order.id })}</span>
         </div>
         <span className={`order-status status-${order.status}`}>{t(`common.status.${order.status}`)}</span>
@@ -29,6 +33,13 @@ export default function OrderCard({ order, currency, actions = [] }) {
         ))}
       </ul>
 
+      {(order.customer_name || order.delivery_location) && (
+        <p className="staff-order-note">
+          {order.customer_name && <><strong>{t('common.orderCard.customer')}:</strong> {order.customer_name}</>}
+          {order.customer_name && order.delivery_location && <br />}
+          {order.delivery_location && <><strong>{t('common.orderCard.location')}:</strong> {order.delivery_location}</>}
+        </p>
+      )}
       {order.notes && <p className="staff-order-note">{t('common.orderCard.note', { note: order.notes })}</p>}
 
       <div className="staff-order-foot">

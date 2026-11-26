@@ -13,6 +13,7 @@ export default {
     "itemOne": "Gaafannaa keessan keessa dantaa 1",
     "itemMany": "Gaafannaa keessan keessa dantaa {count}",
     "notesPlaceholder": "Yaadannoo kushiinii (dirii'uu)",
+    "checkout": "Gara xumuraatti itti fufi",
     "placeOrder": "Gaafachuu",
     "sending": "Eraa jira…"
   }
